@@ -1,14 +1,15 @@
-add_bridgetown_plugin "bridgetown-quick-search"
+require "rake"
+# add_bridgetown_plugin "bridgetown-quick-search"
 
-run "rm yarn.lock && rm -rf node_modules && pnpm add @shoelace-style/shoelace bridgetown-quick-search konnors-pc"
+# run "rm -rf yarn.lock && rm -rf node_modules && pnpm add @shoelace-style/shoelace bridgetown-quick-search konnors-pc"
 
-require 'fileutils'
-require 'shellwords'
-require 'rake'
+# require 'fileutils'
+# require 'shellwords'
+# require 'rake'
 
-javascript_import 'import "@shoelace-style/shoelace/dist/themes/light.css";'
-javascript_import 'import "bridgetown-quick-search";'
-javascript_import 'import "konnors-pc"'
+# javascript_import 'import "@shoelace-style/shoelace/dist/themes/light.css";'
+# javascript_import 'import "bridgetown-quick-search";'
+# javascript_import 'import "konnors-pc"'
 
 # *** Set up remote repo pull
 
@@ -49,13 +50,14 @@ def add_template_repository_to_source_path
 end
 
 def strip_template_prefix(file)
-  file.to_s.gsub(/^templates\//, "")
+  file.to_s.gsub(/^#{@current_dir}\/templates\//, "")
 end
 
 if yes? "The DoxxingTime installer can update styles, layouts, and page templates to use the new theme. You'll have the option to type 'a' to overwrite all existing files or 'd' to inspect each change. Would you like to proceed? (Y/N)"
   add_template_repository_to_source_path
 
-  FileList.new("templates/*").each do |file|
+  FileList.new("#{@current_dir}/templates/**/*.*").each do |file|
+    target = strip_template_prefix(file)
     copy_file(file, target)
   end
 end
