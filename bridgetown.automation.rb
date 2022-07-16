@@ -8,7 +8,7 @@ require 'shellwords'
 require 'rake'
 
 javascript_import 'import "@shoelace-style/shoelace/dist/themes/light.css";'
-javascript_import 'import "bridgetown-quick-search";'
+javascript_import 'import "bridgetown-quick-search/dist";'
 javascript_import 'import "konnors-pc"'
 
 # *** Set up remote repo pull
