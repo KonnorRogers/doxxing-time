@@ -1,12 +1,13 @@
-add_bridgetown_plugin "doxxing_time"
 add_bridgetown_plugin "bridgetown-quick-search"
 
-run "pnpm add @shoelace-style"
+run "rm yarn.lock && rm -rf node_modules && pnpm add @shoelace-style bridgetown-quick-search"
 
 require 'fileutils'
 require 'shellwords'
+require 'rake'
 
 javascript_import 'import "@shoelace-style/shoelace/dist/themes/light.css";'
+javascript_import 'import "bridgetown-quick-search";'
 
 # *** Set up remote repo pull
 
@@ -46,45 +47,16 @@ def add_template_repository_to_source_path
   end
 end
 
-def copy_if_exists(file)
-  target = "src/_layouts/#{file}.html"
-  copy_file "example/src/_layouts/#{file}.liquid", target
+def strip_template_prefix(file)
+  file.to_s.gsub(/^templates\//, "")
 end
 
-def substitute_in_default_if_exists
-  if File.exists?("src/_layouts/default.liquid")
-    gsub_file "src/_layouts/default.liquid", '{% render "footer", ', '{% render "footer", url: site.url, '
-  elsif File.exists?("src/_layouts/default.html")
-    gsub_file "src/_layouts/default.html", '{% render "footer", ', '{% render "footer", url: site.url, '
-  else
-    say_status :bulmatown, "Could not find the default template. You will have to add the url parameter to the render command manually"
-  end
-end
-
-if yes? "The Bulmatown installer can update styles, layouts, and page templates to use the new theme. You'll have the option to type 'a' to overwrite all existing files or 'd' to inspect each change. Would you like to proceed? (Y/N)"
+if yes? "The DoxxingTime installer can update styles, layouts, and page templates to use the new theme. You'll have the option to type 'a' to overwrite all existing files or 'd' to inspect each change. Would you like to proceed? (Y/N)"
   add_template_repository_to_source_path
 
-  ["home", "page", "post"].each { |f| copy_if_exists(f) }
-  substitute_in_default_if_exists
-
-  copy_file "example/src/index.md", "src/index.md"
-  copy_file "example/src/posts.md", "src/posts.md"
-  copy_file "example/src/404.html", "src/404.html"
-
-  copy_file "example/src/_components/navbar.liquid", "src/_components/navbar.liquid"
-  copy_file "example/src/_components/footer.liquid", "src/_components/footer.liquid"
-
-  copy_file "bridgetown.config.yml", "pagination:\n  enabled: true\n", after: "permalink: pretty\n"
-end
-
-twitter = ask "Do you have a Twitter handle? If so, enter it here, otherwise type 'no'"
-
-if twitter != "" && twitter != "no"
-  append_to_file "src/_data/site_metadata.yml" do
-    <<~YAML
-      twitter: #{twitter}
-    YAML
+  FileList.new("templates/*").each do |file|
+    copy_file(file, target)
   end
 end
 
-say_status :bulmatown, "Theme installation complete! Enjoy your fresh new design :)"
+say_status :doxxing_time, "Theme installation complete! Enjoy your fresh new design :)"
