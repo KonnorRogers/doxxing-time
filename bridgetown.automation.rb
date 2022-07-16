@@ -1,6 +1,6 @@
 add_bridgetown_plugin "bridgetown-quick-search"
 
-run "rm yarn.lock && rm -rf node_modules && pnpm add @shoelace-style bridgetown-quick-search"
+run "rm yarn.lock && rm -rf node_modules && pnpm add @shoelace-style bridgetown-quick-search konnors-pc"
 
 require 'fileutils'
 require 'shellwords'
@@ -8,6 +8,7 @@ require 'rake'
 
 javascript_import 'import "@shoelace-style/shoelace/dist/themes/light.css";'
 javascript_import 'import "bridgetown-quick-search";'
+javascript_import 'import "konnors-pc"'
 
 # *** Set up remote repo pull
 

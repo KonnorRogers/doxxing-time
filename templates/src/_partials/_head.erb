@@ -1,8 +1,13 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="<%= site.metadata.description %>">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<% resource_title = strip_html(strip_newlines(title)) || site.metadata.title %>
+<title><%= resource_title %></title>
 
-<title><%= site.metadata.title %></title>
+<meta name="description" content="<%= metadata.description %>" />
+
+<link rel="stylesheet" data-turbo-track="reload" href="<%= webpack_path :css %>" />
+<script data-turbo-track="reload" src="<%= webpack_path :js %>" defer></script>
+<%= live_reload_dev_js %>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -14,64 +19,6 @@
 <meta name="theme-color" content="#ffffff">
 
 <!-- Social stuff -->
-<meta property="og:image" content="https://mrujs.com/images/mugshot.jpeg">
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="<%= site.metadata.title %>">
-
-<!-- App CSS -->
-<link rel="stylesheet" data-turbolinks-track="reload" href="/frontend/styles/index.css">
-
-<!-- Shoelace -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.64/dist/themes/light.css">
-
-<!-- App JS -->
-<script type="module" data-turbolinks-track="reload">
-  import { Controller, Application } from "stimulus"
-  import "bridgetown-quick-search"
-  import "konnors-pc"
-  import mrujs from "mrujs"
-  import "@hotwired/turbo"
-
-  class SearchController extends Controller {
-    static get targets() {
-      return ["container"]
-    }
-
-    show() {
-      this.containerTarget.removeAttribute("hidden");
-    }
-
-    hide() {
-      this.containerTarget.setAttribute("hidden", "")
-    }
-  }
-
-  class SideNavController extends Controller {
-    open() {
-      this.drawer.show()
-    }
-
-    close() {
-      this.drawer.hide()
-    }
-
-    toggle() {
-      if (this.drawer.open) {
-        this.open()
-      } else {
-        this.close()
-      }
-    }
-
-    get drawer() {
-      return document.querySelector("#side-nav-drawer")
-    }
-  }
-
-  mrujs.start()
-  Turbolinks.start()
-
-  const application = Application.start()
-  application.register("side-nav", SideNavController)
-  application.register("search", SearchController)
-</script>
+<%# <meta property="og:image" content="https://mrujs.com/images/mugshot.jpeg"> %>
+<%# <meta property="twitter:card" content="summary_large_image"> %>
+<%# <meta property="twitter:title" content="<%= resource_title %1>"> %>
