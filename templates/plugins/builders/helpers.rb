@@ -1,7 +1,7 @@
 require 'json'
 require "nokogiri"
 
-class Helpers < SiteBuilder
+class Builders::Helpers < SiteBuilder
   def build
     helper "version_number", :version_number
     helper "render_svg", :render_svg
@@ -35,7 +35,7 @@ class Helpers < SiteBuilder
   end
 
   def doc_collection
-    site.collections[:documentation].docs
+    site.collections[:documentation].resources
   end
 
   def ordered_categories
@@ -64,12 +64,15 @@ class Helpers < SiteBuilder
     docs_in_category(category).sort_by { |doc| doc.data.slug }
   end
 
-  def on_github(page)
-    site.metadata.github_url + "/tree/#{site.metadata.default_branch}/#{site.metadata.doc_location}/#{page.relative_path}"
+  def on_github(resource)
+    site.metadata.github_url + "/tree/#{site.metadata.default_branch}/#{site.metadata.doc_location}/#{resource.relative_path}"
   end
 
   def version_number
-    package_json = File.read(File.join(File.expand_path("../../../", __dir__), "package.json"))
-    "#{JSON.parse(package_json)["version"]}"
+    package_json_file = File.join(File.expand_path("../../../", __dir__), "package.json")
+
+    return unless File.exist?(package_json_file)
+    package_json = File.read(package_json_file)
+    JSON.parse(package_json)["version"].to_s
   end
 end
