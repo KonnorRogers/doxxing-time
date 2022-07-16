@@ -1,6 +1,7 @@
 add_bridgetown_plugin "bridgetown-quick-search"
 
-run "bundle add nokogiri"
+run "bundle show bridgetown-quick-search || bundle add bridgetown-quick-search -g bridgetown_plugins"
+run "bundle show nokogiri || bundle add nokogiri"
 run "yarn add @shoelace-style/shoelace bridgetown-quick-search konnors-pc"
 
 require 'fileutils'
