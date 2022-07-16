@@ -1,8 +1,6 @@
-require "rake"
-
 add_bridgetown_plugin "bridgetown-quick-search"
 
-run "rm -rf yarn.lock && rm -rf node_modules && yarn add @shoelace-style/shoelace bridgetown-quick-search konnors-pc"
+run "yarn add @shoelace-style/shoelace bridgetown-quick-search konnors-pc"
 
 require 'fileutils'
 require 'shellwords'
