@@ -2,15 +2,11 @@ add_bridgetown_plugin "bridgetown-quick-search"
 
 run "bundle show bridgetown-quick-search || bundle add bridgetown-quick-search -g bridgetown_plugins"
 run "bundle show nokogiri || bundle add nokogiri"
-run "yarn add @shoelace-style/shoelace bridgetown-quick-search konnors-pc"
+run "yarn add @shoelace-style/shoelace bridgetown-quick-search konnors-pc @hotwired/stimulus @hotwired/turbo"
 
 require 'fileutils'
 require 'shellwords'
 require 'rake'
-
-javascript_import 'import "@shoelace-style/shoelace/dist/themes/light.css";'
-javascript_import 'import "bridgetown-quick-search/dist";'
-javascript_import 'import "konnors-pc"'
 
 # *** Set up remote repo pull
 

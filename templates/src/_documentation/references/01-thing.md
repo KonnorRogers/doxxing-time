@@ -1,4 +1,5 @@
 ---
-title: thing
-permalink: /references/thing
+title: Thing
+permalink: /references/thing/
 ---
+
