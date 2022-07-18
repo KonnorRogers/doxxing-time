@@ -129,7 +129,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bridgetown (~> 1.0.0)
+  bridgetown (~> 1.0)
   bridgetown-quick-search (~> 1.1)
   nokogiri (= 1.13.7)
   puma (~> 5.6)

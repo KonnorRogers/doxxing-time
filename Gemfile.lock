@@ -150,7 +150,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
-  bridgetown (~> 1.0.0)
+  bridgetown (~> 1.0)
   bridgetown-quick-search (~> 1.1)
   minitest (~> 5.0)
   nokogiri (= 1.13.7)
