@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<kpc-container size="medium" style="--relative-width: 90%;">
+  <div class="documentation-grid">
+    <%= render "side_nav" %>
+    <main style="padding: 0 clamp(0px, 4vw, 2rem);">
+      <% title_id = resource.data.title.downcase.split(" ").join("-") %>
+      <h1 id="<%= title_id %>">
+        <a href="<%= "##{title_id}" %>">
+          <%= resource.data.title.titleize %>
+        </a>
+      </h1>
+
+      <%= yield %>
+    </main>
+  </div>
+</kpc-container>

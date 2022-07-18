@@ -1,7 +1,6 @@
 ---
 layout: home
 title: Mrujs
-slogan: Modern Ruby UJS. Sprinkle interactivity into your HTML elements using data attributes.
 call_to_action_items:
   - text: Getting Started
     href: /tutorials/getting-started
