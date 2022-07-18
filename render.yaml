@@ -3,7 +3,7 @@ services:
     name: doxxing-time
     env: static
     buildCommand: examples/bin/bridgetown deploy
-    staticPublishPath: ./examples/output
+    staticPublishPath: ./example/output
     pullRequestPreviewsEnabled: true
     envVars:
       - key: BRIDGETOWN_ENV
