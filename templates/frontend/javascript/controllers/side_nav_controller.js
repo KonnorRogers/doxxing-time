@@ -1,3 +1,5 @@
+import { Controller } from "@hotwired/stimulus"
+
 export default class SideNavController extends Controller {
   open() {
     this.drawer.show()

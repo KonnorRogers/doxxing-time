@@ -1,5 +1,0 @@
-<% indexed_docs_by_category(@category).each do |doc| %>
-  <li class="<%= @list_classes %>">
-    <a class="<%= @link_classes %>" href="<%= doc.permalink %>"><%= doc.data.title %></a>
-  </li>
-<% end %>

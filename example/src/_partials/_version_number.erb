@@ -1,3 +1,5 @@
-<div style="font-size: var(--font-large); margin-left: 0.5rem;">
-  <%= "v#{version_number}" %>
-</div>
+<% if version_number %>
+  <div style="font-size: var(--sl-font-large); margin-left: 0.5rem;">
+    <%= "v#{version_number}" %>
+  </div>
+<% end %>

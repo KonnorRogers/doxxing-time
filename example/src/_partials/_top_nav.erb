@@ -1,9 +1,12 @@
 <div hidden data-search-target="container" class="search-modal">
   <bridgetown-search-form class="search-modal__form">
-    <sl-icon-button class="search-modal__close" name="x-lg" label="Close"
-                    data-action="click->search#hide"></sl-icon-button>
+    <div slot="input" style="width: 95%;">
+      <sl-icon-button class="search-modal__close" name="x-lg" label="Close"
+                      data-action="click->search#hide"></sl-icon-button>
 
-    <input slot="input" type="search" class="search-modal__input">
+      <input id="top-nav-search" type="search" class="search-modal__input input">
+      <sl-visually-hidden><label for="top-nav-search">Search for documentation</label></sl-visually-hidden>
+    </div>
     <bridgetown-search-results class="search-modal__results"></bridgetown-search-results>
   </bridgetown-search-form>
 </div>
@@ -33,7 +36,8 @@
         <%= render "categories" %>
       </div>
       <a target="_blank" rel="noreferrer noopener" href="<%= site.metadata.github_url %>" class="nav-link top-nav__github">
-        <sl-icon name="github" label="Link to GitHub"></sl-icon>
+        <sl-icon name="github"></sl-icon>
+        <sl-visually-hidden>Link to Github</sl-visually-hidden>
       </a>
     </div>
   </nav>

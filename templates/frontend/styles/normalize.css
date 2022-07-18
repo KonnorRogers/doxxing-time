@@ -1,10 +1,13 @@
 :root {
-  --accent-color: var(--sl-color-fuschia-600);
-  --link-color: var(--accent-color);
-  --link-focus-color: var(--sl-color-fuschia-500);
+  --color-primary: var(--sl-color-primary-600);
+  --text-color-primary: var(--sl-color-primary-700);
+  --link-color: var(--sl-color-primary-700);
+  --link-color-focus: var(--sl-color-primary-500);
+  --divider-color: var(--sl-color-neutral-300);
   --code-color: hsl(209, 27%, 26%);
   --code-background-color: hsl(210, 29%, 97%);
 }
+
 html {
   box-sizing: border-box;
 }
@@ -20,6 +23,16 @@ html, body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: var(--sl-font-sans);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  margin: 0;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 img, picture, video, canvas, svg {
@@ -83,23 +96,23 @@ h3,h4 {
 }
 
 h1 {
-  font-size: var(--sl-font-xx-large);
+  font-size: var(--sl-font-size-x-large);
 }
 
 h2 {
-  font-size: var(--sl-font-x-large);
+  font-size: var(--sl-font-size-x-large);
   margin-top: var(--sl-spacing-xx-large);
   margin-bottom: var(--sl-spacing-small);
 }
 
 h3 {
-  font-size: var(--sl-font-large);
+  font-size: var(--sl-font-size-large);
   margin-top: var(--sl-spacing-x-large);
 }
 
 h4 {
   margin-top: var(--sl-spacing-large);
-  font-size: var(--sl-font-large);
+  font-size: var(--sl-font-size-large);
 }
 
 p {
@@ -135,10 +148,12 @@ ul > li {
 
 /* code blocks */
 /* inline code highlights */
+a,
 a > code,
 a > * > code,
 a > * > code[class*="language-"],
 a {
+  outline: transparent;
   /* Unable to distinguish identifier, this makes links obvious */
   text-decoration: none;
   color: var(--link-color);
@@ -159,11 +174,11 @@ a > * > code[class*="language-"] {
 a:hover > code, a:focus > code,
 a:hover > * > code, a:focus > * > code[class*="language-"],
 a:hover, a:focus {
-  color: var(--link-focus-color);
+  color: var(--link-color-focus);
 }
 
 a:focus, a:hover {
-  border-bottom: 1px solid var(--link-focus-color);
+  border-bottom: 1px solid var(--link-color-focus);
 }
 
 div[class*="language-"] {
@@ -201,4 +216,8 @@ code.highlighter-rouge {
 
 code.highlight {
   margin: var(--sl-spacing-xx-small) 0;
+}
+
+:where(:not(:defined)) {
+  visibility: hidden;
 }

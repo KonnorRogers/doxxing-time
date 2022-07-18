@@ -10,13 +10,9 @@ layout: default
       <%= render "logo" %>
     </div>
 
-    <h1 class="site-title">
-      <%= resource.data.title %>
+    <h1 class="slogan">
+      <%= site.metadata.slogan %>
     </h1>
-
-    <p class="slogan">
-      <%= resource.data.slogan %>
-    </p>
 
     <div class="call-to-action__items" role="list">
       <% resource.data.call_to_action_items.each do |item| %>
