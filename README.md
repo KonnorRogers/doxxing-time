@@ -2,16 +2,16 @@
 
 ## Demo
 
-doxxing-time.vercel.app
+https://doxxing-time.vercel.app
 
 ## Usage
 
 ```bash
-bridgetown new my-project -t erb -c stimulus,turbo --apply="https://github.com/ParamagicDev/doxxing-time"
+bridgetown new my-project -t erb -c stimulus,turbo --apply="https://github.com/konnorrogers/doxxing-time"
 
 # or for existing projects:
 
-bridgetown apply https://github.com/ParamagicDev/doxxing-time
+bridgetown apply https://github.com/konnorrogers/doxxing-time
 ```
 
 ## Notes
