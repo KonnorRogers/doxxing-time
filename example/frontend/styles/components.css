@@ -418,6 +418,10 @@ bridgetown-search-results::part(inner-link):hover {
 }
 
 @media screen and (min-width: 1024px) {
+	.documentation-grid main {
+    border-left: 1px solid var(--sl-color-neutral-200);
+	}
+
   .documentation-grid {
     grid-template-columns: auto 1fr;
   }
@@ -450,13 +454,15 @@ bridgetown-search-results::part(inner-link):hover {
   }
 
   .side-nav--desktop {
+  	position: sticky;
     display: flex;
     width: clamp(225px, 25vw, 300px);
-    border-right: 1px solid var(--sl-color-neutral-200);
     padding-right: 2rem;
     overflow-y: auto;
     flex-direction: column;
     align-items: flex-end;
+    max-height: 73vh;
+		min-height: 73vh;
   }
 
   .side-nav__drawer {
