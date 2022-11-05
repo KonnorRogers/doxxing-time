@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "build": "node esbuild.config.js --minify",
-    "start": "node esbuild.config.js --watch"
+    "start": "node esbuild.config.js --watch",
+    "shoelace:copy-assets": "mkdir -p src/shoelace-assets && cp -r node_modules/@shoelace-style/shoelace/dist/assets src/shoelace-assets"
   },
   "devDependencies": {
     "esbuild": "^0.13.15",
+    "esbuild-plugin-copy": "^1.6.0",
     "glob": "^7.2.0",
     "postcss": "^8.4.0",
     "postcss-flexbugs-fixes": "^5.0.2",
