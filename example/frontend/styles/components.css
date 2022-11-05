@@ -320,7 +320,6 @@ bridgetown-search-results::part(inner-link):hover {
 }
 
 .footer {
-  margin-top: var(--sl-spacing-x-large);
   padding: var(--sl-spacing-2x-large) var(--sl-spacing-2x-small);
   text-align: center;
   border-top: 1px solid var(--sl-color-neutral-200);
