@@ -244,7 +244,7 @@ bridgetown-search-results::part(inner) {
 }
 
 .search-modal__form {
-  margin: 1.5em auto;
+  margin: 1.25em 0;
   position: relative;
   width: 90%;
 }
@@ -258,6 +258,7 @@ bridgetown-search-results::part(inner) {
 .search-modal__input {
   /* Safari -_- likes to round inputs */
   -webkit-appearance: none;
+  appearance: none;
 
   font-size: 1.25rem;
   width: 95%;
@@ -269,13 +270,13 @@ bridgetown-search-results::part(inner) {
 }
 
 .search-modal__results {
-  border-top: 1px solid var(--sl-color-neutral-200);
-  margin: 1em auto;
-  padding-top: 1em;
-  left: 1em;
-  height: 100%;
-  max-width: unset;
-  width: 95%;
+	border-top: 1px solid var(--sl-color-neutral-200);
+	margin: 1em 0;
+	padding-top: 1em;
+	left: 1em;
+	height: 100%;
+	max-width: initial;
+	width: 100%;
 }
 
 .search-modal__results::part(inner) {
@@ -350,12 +351,16 @@ bridgetown-search-results::part(inner) {
   border-bottom: none;
 }
 
+.hero--mobile {
+  min-height: 12rem;
+}
+
 .hero--mobile a {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  height: 12rem;
   width: auto;
+  flex: 0 0 auto;
 }
 
 .hero--mobile .logo__text{
@@ -451,3 +456,4 @@ bridgetown-search-results::part(inner) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+

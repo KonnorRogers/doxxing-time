@@ -2,7 +2,7 @@ add_bridgetown_plugin "bridgetown-quick-search"
 
 run "bundle show bridgetown-quick-search || bundle add bridgetown-quick-search -g bridgetown_plugins"
 run "bundle show nokogiri || bundle add nokogiri"
-run "yarn add @shoelace-style/shoelace bridgetown-quick-search konnors-pc @hotwired/stimulus @hotwired/turbo"
+run "yarn add @shoelace-style/shoelace @konnorr/bridgetown-quick-search @hotwired/stimulus @hotwired/turbo"
 
 require 'fileutils'
 require 'shellwords'
@@ -22,7 +22,7 @@ ROOT_PATH = if __FILE__ =~ %r{\Ahttps?://}
 
 DIR_NAME = File.basename(ROOT_PATH)
 
-GITHUB_PATH = "https://github.com/paramagicdev/#{DIR_NAME}.git"
+GITHUB_PATH = "https://github.com/konnorrogers/#{DIR_NAME}.git"
 
 # Copied from: https://github.com/mattbrictson/rails-template
 # Add this template directory to source_paths so that Thor actions like

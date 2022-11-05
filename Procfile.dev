@@ -1,0 +1,2 @@
+bridgetown: cd example && bin/bridgetown serve
+esbuild: cd example && pnpm run start
