@@ -116,6 +116,7 @@
 input.top-nav__search__input {
   padding: 0.15rem 0.75rem;
   margin-left: var(--sl-spacing-medium);
+  width: clamp(300px, 30vw, 400px);
 }
 
 .top-nav__github {
@@ -190,6 +191,8 @@ bridgetown-search-results {
 bridgetown-search-results::part(inner) {
   z-index: var(--z-search);
   background: white;
+  border-radius: 10px;
+  border: 1px solid gray;
 }
 
 /* input components */
@@ -246,7 +249,6 @@ bridgetown-search-results::part(inner) {
 .search-modal__form {
   margin: 1.25em 0;
   position: relative;
-  width: 90%;
 }
 
 .search-modal__close {
@@ -261,7 +263,7 @@ bridgetown-search-results::part(inner) {
   appearance: none;
 
   font-size: 1.25rem;
-  width: 95%;
+  width: calc(100% - 3.25em);
   border: 1px solid var(--color-primary);
   border-radius: 8px;
   padding: 1em 1em 1em 2.25em;
@@ -270,13 +272,14 @@ bridgetown-search-results::part(inner) {
 }
 
 .search-modal__results {
-	border-top: 1px solid var(--sl-color-neutral-200);
-	margin: 1em 0;
+	border-top: 1px solid var(--light-gray);
+	position: absolute;
 	padding-top: 1em;
-	left: 1em;
+	left: 2.5%;
 	height: 100%;
-	max-width: initial;
-	width: 100%;
+	max-width: unset;
+	width: 95%;
+	margin: 0 auto;
 }
 
 .search-modal__results::part(inner) {
@@ -284,16 +287,18 @@ bridgetown-search-results::part(inner) {
   box-shadow: none;
   max-height: unset;
   height: 85vh;
+}
+
+bridgetown-search-results::part(inner) {
   padding: 0;
 }
 
-.search-modal__results::part(inner-link) {
+bridgetown-search-results::part(inner-link) {
   padding: 1em;
-  border-radius: 10px;
 }
 
-.search-modal__results::part(inner-link):focus,
-.search-modal__results::part(inner-link):hover {
+bridgetown-search-results::part(inner-link):focus,
+bridgetown-search-results::part(inner-link):hover {
   background: var(--sl-color-neutral-50);
 }
 
@@ -456,4 +461,5 @@ bridgetown-search-results::part(inner) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 

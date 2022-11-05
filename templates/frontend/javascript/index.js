@@ -1,17 +1,14 @@
 import "index.css"
 import * as Turbo from "@hotwired/turbo"
 import { Application } from "@hotwired/stimulus"
-import { setBasePath } from "@shoelace-style/shoelace/dist/utilities/base-path"
 import "@shoelace-style/shoelace/dist/themes/light.css";
-import "@konnorr/bridgetown-quick-search/frontend/dist/bundle/index";
+import "@konnorr/bridgetown-quick-search";
 import "konnors-pc"
 import "@shoelace-style/shoelace/dist/components/button/button"
 import "@shoelace-style/shoelace/dist/components/icon/icon"
 import "@shoelace-style/shoelace/dist/components/icon-button/icon-button"
 import "@shoelace-style/shoelace/dist/components/drawer/drawer"
 import "@shoelace-style/shoelace/dist/components/visually-hidden/visually-hidden"
-
-setBasePath("https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.78/dist/")
 
 // Uncomment the line below to add transition animations when Turbo navigates.
 // We recommend adding <meta name="turbo-cache-control" content="no-preview" />

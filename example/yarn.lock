@@ -123,10 +123,10 @@
   resolved "https://registry.yarnpkg.com/@hotwired/turbo/-/turbo-7.2.4.tgz#0d35541be32cfae3b4f78c6ab9138f5b21f28a21"
   integrity sha512-c3xlOroHp/cCZHDOuLp6uzQYEbvXBUVaal0puXoGJ9M8L/KHwZ3hQozD4dVeSN9msHWLxxtmPT1TlCN7gFhj4w==
 
-"@konnorr/bridgetown-quick-search@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@konnorr/bridgetown-quick-search/-/bridgetown-quick-search-3.0.0.tgz#a2d356718f9d38c3c5c3dac9309760fec7a2b6d3"
-  integrity sha512-vR+qifIw3FE23ivDKQUUGRK3L3fOie4lngQu66Uc/bQMper1Yze9M6XIJgeHBy5fTFRsv2vm3+YkT8CEiy2//g==
+"@konnorr/bridgetown-quick-search@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@konnorr/bridgetown-quick-search/-/bridgetown-quick-search-3.0.1.tgz#25aaba5864a366197fa5f6266cfb53597d807d94"
+  integrity sha512-bcgzJdDzf0aHNmsw6NmVTC1omgipQVehPODQfkEtZTBgpQDtHAQ8C7zt/JcpsjrNSV7dUCpE/RO7HZdGkUf0Rg==
   dependencies:
     lit "^2.4.1"
     lunr "^2.3.8"
@@ -515,7 +515,7 @@ lit@^2.2.8, lit@^2.4.1:
     lit-element "^3.2.0"
     lit-html "^2.4.0"
 
-lunr@^2.3.8:
+lunr@^2.3.8, lunr@^2.3.9:
   version "2.3.9"
   resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.3.9.tgz#18b123142832337dd6e964df1a5a7707b25d35e1"
   integrity sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow==

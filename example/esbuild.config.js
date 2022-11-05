@@ -12,8 +12,8 @@ const outputFolder = "output"
 //   plugins: [
 //     esbuildCopy({
 //       assets: {
-//         from: [path.resolve(__dirname, 'node_modules/somepackage/files/*')],
-//         to: [path.resolve(__dirname, 'output/_bridgetown/somepackage/files')],
+//         from: [path.resolve(__dirname, 'node_modules/@shoelace-style/shoelace/dist/assets')],
+//         to: [path.resolve(__dirname, 'output/shoelace-assets/')],
 //       },
 //       verbose: false
 //     }),
@@ -26,6 +26,7 @@ const outputFolder = "output"
 // ```
 // const esbuildOptions = { publicPath: "/my_subfolder/_bridgetown/static" }
 // ```
+
 const esbuildOptions = {}
 
 build(outputFolder, esbuildOptions)
