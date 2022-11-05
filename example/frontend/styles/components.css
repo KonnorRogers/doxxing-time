@@ -192,7 +192,14 @@ bridgetown-search-results::part(inner) {
   z-index: var(--z-search);
   background: white;
   border-radius: 10px;
+}
+
+bridgetown-search-results::part(inner) {
   border: 1px solid gray;
+}
+
+.search-modal__results::part(inner) {
+	border-color: transparent;
 }
 
 /* input components */

@@ -1,8 +1,7 @@
-add_bridgetown_plugin "bridgetown-quick-search"
-
 run "bundle show bridgetown-quick-search || bundle add bridgetown-quick-search -g bridgetown_plugins"
 run "bundle show nokogiri || bundle add nokogiri"
 run "yarn add @shoelace-style/shoelace @konnorr/bridgetown-quick-search @hotwired/stimulus @hotwired/turbo"
+run "mkdir -p src/shoelace-assets && cp -r node_modules/@shoelace-style/shoelace/dist/assets src/shoelace-assets"
 
 require 'fileutils'
 require 'shellwords'
