@@ -123,10 +123,10 @@
   resolved "https://registry.yarnpkg.com/@hotwired/turbo/-/turbo-7.2.4.tgz#0d35541be32cfae3b4f78c6ab9138f5b21f28a21"
   integrity sha512-c3xlOroHp/cCZHDOuLp6uzQYEbvXBUVaal0puXoGJ9M8L/KHwZ3hQozD4dVeSN9msHWLxxtmPT1TlCN7gFhj4w==
 
-"@konnorr/bridgetown-quick-search@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@konnorr/bridgetown-quick-search/-/bridgetown-quick-search-3.0.1.tgz#25aaba5864a366197fa5f6266cfb53597d807d94"
-  integrity sha512-bcgzJdDzf0aHNmsw6NmVTC1omgipQVehPODQfkEtZTBgpQDtHAQ8C7zt/JcpsjrNSV7dUCpE/RO7HZdGkUf0Rg==
+"@konnorr/bridgetown-quick-search@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@konnorr/bridgetown-quick-search/-/bridgetown-quick-search-3.0.2.tgz#076d6153f3021d26dfeb6f251ac2fbed76c4a277"
+  integrity sha512-bzD8DbDQWj5oTAAdh4pAWj7Tx3iGMQhtk0UbqiSh7S2UmbQ4rjKMAAFdXIrWjY6iBDbA8GJnkh0DRUDt+0YoNg==
   dependencies:
     lit "^2.4.1"
     lunr "^2.3.8"

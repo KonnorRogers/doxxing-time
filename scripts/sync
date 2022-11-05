@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+templates = Dir["templates/**/*"]
+  .reject { |file| File.directory?(file) }
+
+base_templates = templates.map { |file| file.to_s.delete_prefix("templates") }
+
+
+example_files = Dir["example/**/*"]
+  .reject { |file| File.directory?(file) }
+  .select { |file| base_templates.include?(file.to_s.delete_prefix("example")) }
+
+example_files.each do |example_file|
+  contents = File.read(example_file)
+
+  template_file = "templates" + example_file.to_s.delete_prefix("example")
+  puts template_file
+  # File.open(template_file, "w") { |file| file.write(contents) }
+end
