@@ -364,6 +364,7 @@ bridgetown-search-results::part(inner-link):hover {
 
 .hero--mobile {
   min-height: 12rem;
+  display: flex;
 }
 
 .hero--mobile a {
