@@ -1,6 +1,36 @@
 :root {
-  --z-top-nav: 2;
+  --z-header: 2;
   --z-search: 3;
+
+  --nav-header-height: 68px;
+  --footer-height: 135px;
+  --side-nav-width: 300px;
+  --main-width: 75ch;
+  --main-padding-x: 2rem;
+}
+
+main {
+	max-width: var(--main-width);
+	padding: 0 var(--main-padding-x) 2rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.doc main {
+	background-color: white;
+}
+
+.nav-header {
+  position: sticky;
+  top: 0;
+  height: var(--nav-header-height);
+  z-index: var(--z-header);
+  display: flex;
+  padding: 0 1.5em;
+  font-size: 1.05rem;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--sl-color-neutral-200);
+  background: white;
 }
 
 .logo__link {
@@ -48,15 +78,6 @@
 }
 
 .top-nav {
-  margin: 0 auto;
-  font-size: 1.05rem;
-  padding: var(--sl-spacing-large) 0;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--sl-color-neutral-200);
-  position: sticky;
-  top: 0;
-  background: white;
-  z-index: var(--z-top-nav);
 }
 
 .top-nav__go-home {
@@ -88,6 +109,7 @@
 
 .top-nav__search {
   margin: 0;
+  margin-inline-start: auto;
   order: 1;
 }
 
@@ -416,15 +438,19 @@ bridgetown-search-results::part(inner-link):hover {
 .documentation-grid {
   display: grid;
   grid-template-columns: 1fr;
+  background-color: var(--sl-color-neutral-50);
 }
 
 @media screen and (min-width: 1024px) {
 	.documentation-grid main {
-    border-left: 1px solid var(--sl-color-neutral-200);
+		margin: 2rem 0;
+		box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%);
+		background: white;
+		border-radius: 4px;
 	}
 
   .documentation-grid {
-    grid-template-columns: auto 1fr;
+		grid-template-columns: minmax(250px, 1fr) minmax(0, calc(var(--main-width) + var(--main-padding-x))) minmax(0, 1fr);
   }
 
   /* .hero--mobile, */
@@ -457,13 +483,13 @@ bridgetown-search-results::part(inner-link):hover {
   .side-nav--desktop {
   	position: sticky;
     display: flex;
-    width: clamp(225px, 25vw, 300px);
     padding-right: 2rem;
     overflow-y: auto;
     flex-direction: column;
     align-items: flex-end;
-    max-height: 73vh;
-		min-height: 73vh;
+    height: calc(100vh - var(--nav-header-height) - var(--footer-height) - 2em);
+		margin-bottom: 1em;
+    top: calc(var(--nav-header-height));
   }
 
   .side-nav__drawer {
