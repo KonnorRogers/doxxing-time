@@ -620,14 +620,6 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-konnors-pc@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/konnors-pc/-/konnors-pc-0.0.9.tgz#986127083bb164414887dd38961dfcd8fb20b538"
-  integrity sha512-NjIbezJX1iLRXMV3J21tAJBloY2zl+jzgmLFAZusPEBX3yV5mm6Ro0CDlbqwja2pUvE077CDC4f4Wp1XNva6Ew==
-  dependencies:
-    lit "^2.2.1"
-    tslib "^2.3.1"
-
 lilconfig@^2.0.5:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.6.tgz#32a384558bd58af3d4c6e077dd1ad1d397bc69d4"
@@ -655,7 +647,7 @@ lit-html@^2.4.0:
   dependencies:
     "@types/trusted-types" "^2.0.2"
 
-lit@^2.0.0, lit@^2.2.1:
+lit@^2.0.0:
   version "2.2.7"
   resolved "https://registry.yarnpkg.com/lit/-/lit-2.2.7.tgz#a563e8851db1f131912f510129dcc9a42324e838"
   integrity sha512-WXYujlKFwme5ZqXOZoWuRVZQAwy7scbcVT3wCbAOHefOxyscqjywWGlF2e6nnC9E64yP9l2ZQlN8wZcRlrjUMQ==
@@ -1108,11 +1100,6 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
-
-tslib@^2.3.1:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
-  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
 
 universalify@^2.0.0:
   version "2.0.0"
