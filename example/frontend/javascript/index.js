@@ -3,7 +3,6 @@ import * as Turbo from "@hotwired/turbo"
 import { Application } from "@hotwired/stimulus"
 import "@shoelace-style/shoelace/dist/themes/light.css";
 import "@konnorr/bridgetown-quick-search";
-import "konnors-pc"
 import { setBasePath } from "@shoelace-style/shoelace/dist/utilities/base-path"
 import "@shoelace-style/shoelace/dist/components/button/button"
 import "@shoelace-style/shoelace/dist/components/icon/icon"
