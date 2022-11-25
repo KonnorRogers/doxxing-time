@@ -5,7 +5,7 @@
   --nav-header-height: 68px;
   --footer-height: 135px;
   --side-nav-width: 300px;
-  --main-width: 75ch;
+  --main-width: clamp(75ch, 70vw, 100ch);
   --main-padding-x: 2rem;
 }
 
