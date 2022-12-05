@@ -164,7 +164,7 @@ a > * > code[class*="language-"] {
 a > code,
 a > * > code,
 a > * > code[class*="language-"] {
-  border-color: transparent;
+  text-decoration: none;
 }
 
 
@@ -175,7 +175,7 @@ a:hover, a:focus {
 }
 
 a:focus, a:hover {
-  border-bottom: 1px solid var(--link-color-focus);
+  text-decoration: underline solid var(--link-color-focus);
 }
 
 div[class*="language-"] {
