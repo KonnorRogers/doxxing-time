@@ -10,7 +10,8 @@
 
 html {
   box-sizing: border-box;
-  height: 100%;
+  display: grid;
+  min-height: 100vh;
 }
 
 *, *:before, *:after {
@@ -69,10 +70,7 @@ h1,h2,h3,h4 {
   scroll-margin-top: calc(80px + 2em);
 }
 
-h1 > a,
-h2 > a,
-h3 > a,
-h4 > a {
+:is(h1, h2, h3, h4) > a {
   text-decoration: none;
 }
 
@@ -123,25 +121,20 @@ p, li {
 }
 
 ul {
-  padding-left: var(--sl-spacing-x-small);
   line-height: 1.8;
-  list-style: disc inside;
+  list-style: disc outside;
 }
 
 ul ul {
-  list-style: circle inside;
+  list-style: circle outside;
 }
 
 ul ul ul {
-  list-style: square inside;
+  list-style: square outside;
 }
 
 ul ul ul ul {
-  list-style: disc inside;
-}
-
-ul > li {
-  padding-left: var(--sl-spacing-medium);
+  list-style: disc outside;
 }
 
 /* code blocks */
@@ -218,3 +211,4 @@ code.highlight {
 :where(:not(:defined)) {
   visibility: hidden;
 }
+
