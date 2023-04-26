@@ -36,17 +36,17 @@ main {
 .logo__link {
   flex: 1 0 auto;
   width: auto;
+  text-decoration: none;
 }
 
-.logo__link:focus,
-.logo__link:hover {
-  border-bottom: 1px solid transparent;
+.logo__link:is(:focus, :hover) {
+  text-decoration: underline;
 }
 
 .logo__text {
   color: var(--text-color-primary);
   font-size: var(--sl-font-size-x-large);
-  border-bottom: 1px solid transparent;
+  text-decoration: none;
   padding-bottom: var(--sl-spacing-x-small);
   margin-bottom: calc(var(--sl-spacing-x-small) - (var(--sl-spacing-x-small) * 2));
   margin-left: var(--sl-spacing-2x-small);
@@ -55,7 +55,7 @@ main {
 .logo__link:focus > .logo__text,
 .logo__link:hover > .logo__text {
   color: var(--link-color-focus);
-  border-bottom: 1px solid var(--link-color-focus);
+  border-bottom: underline;
 }
 
 .logo__link:focus > .logo__image,
@@ -163,7 +163,11 @@ input.top-nav__search__input {
 
 .side-nav__link {
   color: var(--sl-color-gray-500);
-  border-bottom: 1px solid transparent;
+  text-decoration: none;
+}
+
+.side-nav__link:is(:hover, :focus) {
+  text-decoration: underline;
 }
 
 .side-nav__category-header {
@@ -175,7 +179,6 @@ input.top-nav__search__input {
 .side-nav__category-header,
 .side-nav__link {
   font-family: var(--sl-font-sans);
-  border-color: transparent;
 }
 
 .side-nav--desktop {
@@ -355,6 +358,7 @@ bridgetown-search-results::part(inner-link):hover {
   font-weight: bold;
   border-radius: 9999px;
   border-bottom: 1px solid transparent;
+  text-decoration: none;
 }
 
 .call-to-action:is(:hover, :focus) {

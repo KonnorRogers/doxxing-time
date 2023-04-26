@@ -1,10 +1,14 @@
 ---
 layout: default
+pagination:
+  collection: documentation
+paginate:
+  collection: documentation
 ---
 
 <div class="documentation-grid">
   <%= render "side_nav" %>
-  <main>
+  <main style="display: grid; grid-template-rows: minmax(0, 1fr);">
     <% title_id = resource.data.title.downcase.split(" ").join("-") %>
     <h1 id="<%= title_id %>">
       <a href="<%= "##{title_id}" %>">
@@ -13,5 +17,44 @@ layout: default
     </h1>
 
     <%= yield %>
+
+    <footer style="margin-top: auto; display: flex; justify-content: space-between;">
+      <% if resource.paginator.total_pages > 1 %>
+        <% if paginator.previous_page %>
+          <sl-button>
+            <a href="<%= resource.paginator.previous_page_path %>">Previous Page</a>
+          </sl-button>
+        <% end %>
+        <% if paginator.next_page %>
+          <sl-button>
+            <a href="<%= resource.paginator.next_page_path %>">Next Page</a>
+          </sl-button>
+        <% end %>
+      <% end %>
+      {% if url_sections.size > 3 %}
+        <p style="text-align:center; margin-top:4rem">
+          <a href="/docs/{{ resource.data.back_to || resource.data.category }}"><sl-button variant="primary" size="small" outline>
+            Back to {{ resource.data.category | titleize }}
+            <sl-icon slot="prefix" library="remixicon" name="system/arrow-up-s-fill"></sl-icon>
+          </sl-button></a>
+        </p>
+      {% else %}
+        {% next_order = resource.data.next_page_order %}
+        {% unless next_order %}
+          {% next_order = page.data.order + 10 %}
+        {% end %}
+        {% alldocs = collections.docs.resources %}
+        {% next_page = collections.docs.resources.find { _1.data.order == next_order } %}
+        {% if next_page %}
+          <p style="text-align:right; margin-top:4rem">
+            <a href="{{ next_page.relative_url }}"><sl-button variant="primary" size="small" outline>
+              {{ next_page.data.title }}
+              <sl-icon slot="suffix" library="remixicon" name="system/arrow-right-s-fill"></sl-icon>
+            </sl-button></a>
+          </p>
+        {% end %}
+      {% end %}
+    </footer>
   </main>
 </div>
+
