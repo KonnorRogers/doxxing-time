@@ -36,6 +36,8 @@ paginate:
           </span>
 
         </sl-button>
+      <% else %>
+        <div></div>
       <% end %>
       <% if next_page %>
         <sl-button class="next-page" href="<%= next_page.relative_url %>">
