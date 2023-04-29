@@ -451,7 +451,9 @@ sl-button:is(.previous-page, .next-page) {
 }
 
 sl-button:is(.previous-page, .next-page)::part(label) {
+  max-width: calc(100% - 24px);
   width: 100%;
+  overflow: hidden;
 }
 
 sl-button:is(.next-page)::part(base) {
@@ -476,6 +478,15 @@ sl-button:is(.next-page, .previous-page):is(:hover, :focus) {
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   justify-content: space-between;
   gap: 1rem;
+}
+
+pagination-title {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 1.15rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 1024px) {
