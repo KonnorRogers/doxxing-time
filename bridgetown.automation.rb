@@ -1,11 +1,8 @@
-run "bundle show bridgetown-quick-search || bundle add bridgetown-quick-search -g bridgetown_plugins"
-run "bundle show nokogiri || bundle add nokogiri"
-run "yarn add @shoelace-style/shoelace @konnorr/bridgetown-quick-search @hotwired/stimulus @hotwired/turbo"
-run "mkdir -p src/shoelace-assets && cp -r node_modules/@shoelace-style/shoelace/dist/assets src/shoelace-assets"
 
 require 'fileutils'
 require 'shellwords'
 require 'rake'
+require 'json'
 
 # *** Set up remote repo pull
 
@@ -51,6 +48,17 @@ end
 
 if yes? "The DoxxingTime installer can update styles, layouts, and page templates to use the new theme. You'll have the option to type 'a' to overwrite all existing files or 'd' to inspect each change. Would you like to proceed? (Y/N)"
   add_template_repository_to_source_path
+
+  package_json = JSON.parse(File.read("#{@current_dir}/example/package.json"))
+
+  packages = []
+  packages.concat(package_json["dependencies"].keys)
+  packages.concat(package_json["devDependencies"].keys)
+
+  run "bundle show bridgetown-quick-search || bundle add bridgetown-quick-search -g bridgetown_plugins"
+  run "bundle show nokogiri || bundle add nokogiri"
+  run "yarn add #{packages.join(" ")}"
+  run "mkdir -p src/shoelace-assets && cp -r node_modules/@shoelace-style/shoelace/dist/assets src/shoelace-assets"
 
   FileList.new("#{@current_dir}/templates/**/*.*").each do |file|
     target = strip_template_prefix(file)
