@@ -1,0 +1,24 @@
+<% require "securerandom"; id = "syntax-#{SecureRandom.uuid}" %>
+
+<div class="syntax-block">
+  <div class="syntax-block__actions">
+    <div class="syntax-block__badge">
+      <%= full_language_or_filename %>
+    </div>
+
+    <clipboard-copy
+      for="<%= id %>"
+      class="button clipboard clipboard--idle syntax-block__clipboard"
+      aria-label="Copy to clipboard"
+      data-controller="clipboard"
+    >
+      <sl-icon class="clipboard__icon--success" name="clipboard-check"></sl-icon>
+      <sl-icon class="clipboard__icon--idle" name="clipboard"></sl-icon>
+    </clipboard-copy>
+
+    <div id="<%= id %>" hidden>
+      <%= content %>
+    </div>
+  </div>
+  <%= markdownify("```#{@language}" + content + "```") %>
+</div>
