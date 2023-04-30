@@ -217,11 +217,6 @@ code.highlighter-rouge {
   white-space: break-spaces;
 }
 
-:where(:not(:defined)) {
-  visibility: hidden;
-}
-
-
 /** https://github.com/shoelace-style/shoelace/pull/1317 */
 sl-button::part(base) {
   min-height: var(--sl-input-height-medium);
