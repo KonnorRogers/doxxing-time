@@ -10,7 +10,8 @@
 
 html {
   box-sizing: border-box;
-  height: 100%;
+  min-height: 100%;
+  display: grid;
 }
 
 *, *:before, *:after {
@@ -51,10 +52,6 @@ body {
   min-height: 100%;
 }
 
-[hidden] {
-  display: none !important;
-}
-
 button {
   appearance: none;
   border: none;
@@ -67,17 +64,6 @@ button:hover {
 
 h1,h2,h3,h4 {
   scroll-margin-top: calc(80px + 2em);
-}
-
-h1 > a,
-h2 > a,
-h3 > a,
-h4 > a {
-  text-decoration: none;
-}
-
-h2,h3,h4 {
-  border-bottom: 1px solid var(--sl-color-gray-700);
 }
 
 h1 {
@@ -123,25 +109,20 @@ p, li {
 }
 
 ul {
-  padding-left: var(--sl-spacing-x-small);
   line-height: 1.8;
-  list-style: disc inside;
+  list-style: disc outside;
 }
 
 ul ul {
-  list-style: circle inside;
+  list-style: circle outside;
 }
 
 ul ul ul {
-  list-style: square inside;
+  list-style: square outside;
 }
 
 ul ul ul ul {
-  list-style: disc inside;
-}
-
-ul > li {
-  padding-left: var(--sl-spacing-medium);
+  list-style: disc outside;
 }
 
 /* code blocks */
@@ -153,7 +134,10 @@ a > * > code[class*="language-"] {
   word-wrap: anywhere;
   /* outline: transparent; */
   /* Unable to distinguish identifier, this makes links obvious */
-  text-decoration: underline solid var(--link-color);
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--link-color);
+  text-underline-offset: 0.25em;
   color: var(--link-color);
   border-radius: 0;
   display: inline;
@@ -161,11 +145,15 @@ a > * > code[class*="language-"] {
   line-height: 1.2;
 }
 
-a > code,
-a > * > code,
-a > * > code[class*="language-"] {
-  text-decoration: none;
+[tabindex="-1"] {
+  outline: transparent;
 }
+
+/* a > code, */
+/* a > * > code, */
+/* a > * > code[class*="language-"] { */
+/*   text-decoration: none; */
+/* } */
 
 
 a:hover > code, a:focus > code,
@@ -175,7 +163,9 @@ a:hover, a:focus {
 }
 
 a:focus, a:hover {
-  text-decoration: underline solid var(--link-color-focus);
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--link-color-focus);
 }
 
 div[class*="language-"] {
@@ -205,17 +195,23 @@ code > span {
   position: relative;
 }
 
+/* Inline code blocks */
 code.highlight,
 code.highlighter-rouge {
   display: inline-block;
-  font-size: 0.85em;
+  font-size: 0.95em;
   padding: 0.2em 0.4em;
   margin: var(--sl-spacing-xx-small) 0;
   border-radius: var(--sl-border-radius-base);
   background-color: var(--code-background-color);
   color: var(--code-color);
   white-space: break-spaces;
+  vertical-align: middle;
 }
+
+/* :where(:not(:defined)) { */
+/*   visibility: hidden; */
+/* } */
 
 /** https://github.com/shoelace-style/shoelace/pull/1317 */
 sl-button::part(base) {

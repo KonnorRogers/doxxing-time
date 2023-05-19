@@ -5,7 +5,7 @@
   --nav-header-height: 68px;
   --footer-height: 135px;
   --side-nav-width: 300px;
-  --main-width: 75ch;
+  --main-width: clamp(75ch, 70vw, 100ch);
   --main-padding-x: 2rem;
 }
 
@@ -14,6 +14,10 @@ main {
 	padding: 0 var(--main-padding-x) 2rem;
 	width: 100%;
 	margin: 0 auto;
+}
+
+.home main {
+  max-width: var(--main-width);
 }
 
 .doc main {
@@ -36,17 +40,18 @@ main {
 .logo__link {
   flex: 1 0 auto;
   width: auto;
-  text-decoration: none;
 }
 
-.logo__link:is(:focus, :hover) {
-  text-decoration: underline;
+.logo__link:focus,
+.logo__link:hover {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--link-color);
 }
 
 .logo__text {
   color: var(--text-color-primary);
   font-size: var(--sl-font-size-x-large);
-  text-decoration: none;
   padding-bottom: var(--sl-spacing-x-small);
   margin-bottom: calc(var(--sl-spacing-x-small) - (var(--sl-spacing-x-small) * 2));
   margin-left: var(--sl-spacing-2x-small);
@@ -55,7 +60,6 @@ main {
 .logo__link:focus > .logo__text,
 .logo__link:hover > .logo__text {
   color: var(--link-color-focus);
-  border-bottom: underline;
 }
 
 .logo__link:focus > .logo__image,
@@ -148,7 +152,9 @@ input.top-nav__search__input {
 
 .nav-link {
   color: var(--sl-color-gray-600);
-  border-color: transparent;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--sl-color-primary-500);
 }
 
 .side-nav__menu {
@@ -163,11 +169,7 @@ input.top-nav__search__input {
 
 .side-nav__link {
   color: var(--sl-color-gray-500);
-  text-decoration: none;
-}
-
-.side-nav__link:is(:hover, :focus) {
-  text-decoration: underline;
+  text-decoration-color: currentColor;
 }
 
 .side-nav__category-header {
@@ -179,6 +181,7 @@ input.top-nav__search__input {
 .side-nav__category-header,
 .side-nav__link {
   font-family: var(--sl-font-sans);
+  border-color: transparent;
 }
 
 .side-nav--desktop {
@@ -278,6 +281,10 @@ bridgetown-search-results::part(inner) {
   background: var(--sl-color-neutral-0);
 }
 
+.search-modal:not([hidden]) ~ * {
+  display: none;
+}
+
 .search-modal__form {
   margin: 1.25em 0;
   position: relative;
@@ -357,13 +364,10 @@ bridgetown-search-results::part(inner-link):hover {
   color: white;
   font-weight: bold;
   border-radius: 9999px;
-  border-bottom: 1px solid transparent;
-  text-decoration: none;
 }
 
 .call-to-action:is(:hover, :focus) {
   color: white;
-  border-bottom: 1px solid transparent;
 }
 
 .call-to-action--primary {
@@ -389,8 +393,9 @@ bridgetown-search-results::part(inner-link):hover {
 }
 
 .hero--mobile {
-  min-height: 12rem;
   display: flex;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .hero--mobile a {
@@ -445,6 +450,11 @@ bridgetown-search-results::part(inner-link):hover {
   background-color: var(--sl-color-neutral-50);
 }
 
+.documentation-content {
+	display: flex;
+	flex-direction: column;
+}
+
 /** Pagination */
 sl-button:is(.previous-page, .next-page) {
   transition: transform 0.15s;
@@ -489,6 +499,10 @@ pagination-title {
   white-space: nowrap;
 }
 
+sl-alert {
+  margin: 1rem 0;
+}
+
 sl-alert p {
   margin: 0;
   padding: 0;
@@ -524,10 +538,11 @@ sl-alert::part(base) {
 }
 
 .syntax-block__badge {
-  font-size: var(--sl-button-font-size-medium);
+  font-size: var(--sl-button-font-size-large);
   color: var(--sl-color-neutral-600);
 }
 
+/** Button */
 .button {
   padding: 0.4em 0.6em;
   display: block;
@@ -542,7 +557,6 @@ sl-alert::part(base) {
   border-width: var(--sl-input-border-width);
   font-family: var(--sl-input-font-family);
   font-weight: var(--sl-font-weight-semibold);
-  text-decoration: none;
   user-select: none;
   white-space: nowrap;
   transition: var(--sl-transition-x-fast) background-color, var(--sl-transition-x-fast) color,
@@ -565,6 +579,7 @@ sl-alert::part(base) {
 .button:focus-visible {
   outline: var(--sl-focus-ring);
   outline-offset: var(--sl-focus-ring-offset);
+
 }
 
 .button:hover {
@@ -579,6 +594,7 @@ sl-alert::part(base) {
   color: var(--sl-color-primary-700);
 }
 
+/** Clipboard **/
 .clipboard.clipboard--success:is(:hover, :focus, :active),
 .clipboard.clipboard--success {
   background-color: var(--sl-color-success-100);
@@ -611,10 +627,8 @@ sl-alert::part(base) {
   transform: scale(0);
 }
 
-
-
 @media screen and (min-width: 1024px) {
-	.documentation-grid main {
+	.documentation-content {
 		margin: 2rem 0;
 		box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%);
 		background: white;
@@ -672,3 +686,4 @@ sl-alert::part(base) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
