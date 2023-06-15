@@ -7,8 +7,6 @@ development:
 
 template_engine: erb
 permalink: pretty
-pagination:
-  enabled: true
 
 collections:
   documentation:

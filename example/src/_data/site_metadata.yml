@@ -4,13 +4,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.metadata.myvariable }}.
 
-title: Mrujs
-logo: "[mrujs]"
-slogan: Modern Ruby UJS. Sprinkle interactivity into your HTML elements using data attributes.
+title: Rhino Editor
+logo: "Rhino Editor"
+slogan: An ActionText compatible rich text editor.
 email: konnor5456@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Mrujs is a frontend library for adding dynamic behavior to HTML elements using data
-  attributes. Mrujs aims for simplicity and power.
-github_url: https://github.com/paramagicdev/mrujs
+  Rhino editor is a durable and flexible editor designed to provide an easy to use out of the box
+  experience while providing hooks and plugins to allow for easy extension.
+github_url: https://github.com/konnorrogers/rhino-editor
 default_branch: main
 doc_location: docs/src
