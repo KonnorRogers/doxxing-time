@@ -19,4 +19,3 @@ export default class ClipboardController extends Controller {
     }, 2_000)
   }
 }
-

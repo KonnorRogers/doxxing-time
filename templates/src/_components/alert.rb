@@ -1,3 +1,5 @@
+# @example
+#   <%= render Alert.new(type: "warning", title:) %>
 class Alert < Bridgetown::Component
   ICONS = {
     primary: "info-circle",
@@ -7,13 +9,11 @@ class Alert < Bridgetown::Component
     danger: "exclamation-octagon"
   }.freeze
 
-  def initialize(type: :info, title: nil)
+  def initialize(type: :info, title: nil, icon: nil)
     @type = type.to_sym
     @title = title
 
-    raise ArgumentError("#{@type} is not a valid type.") unless ICONS.key?(@type)
-
-    @icon = ICONS[@type]
+    @icon = icon || ICONS[@type]
   end
 
   def title

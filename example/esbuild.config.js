@@ -12,10 +12,10 @@ const outputFolder = "output"
 //   plugins: [
 //     esbuildCopy({
 //       assets: {
-//         from: [path.resolve(__dirname, 'node_modules/@shoelace-style/shoelace/dist/assets/icons/**/*.svg')],
-//         to: [path.resolve(__dirname, 'output/_bridgetown/shoelace-assets/assets/icons')],
+//         from: [path.resolve(__dirname, 'node_modules/somepackage/files/*')],
+//         to: [path.resolve(__dirname, 'output/_bridgetown/somepackage/files')],
 //       },
-//       verbose: true
+//       verbose: false
 //     }),
 //   ]
 // }
@@ -26,5 +26,10 @@ const outputFolder = "output"
 // ```
 // const esbuildOptions = { publicPath: "/my_subfolder/_bridgetown/static" }
 // ```
-const esbuildOptions = {}
+const esbuildOptions = {
+  entryPoints: [
+    "frontend/javascript/index.js",
+  ]
+}
+
 build(outputFolder, esbuildOptions)

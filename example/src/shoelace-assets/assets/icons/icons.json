@@ -1,5 +1,49 @@
 [
   {
+    "name": "0-circle-fill",
+    "title": "0 circle fill",
+    "categories": [
+      "Shapes"
+    ],
+    "tags": [
+      "number",
+      "numeral"
+    ]
+  },
+  {
+    "name": "0-circle",
+    "title": "0 circle",
+    "categories": [
+      "Shapes"
+    ],
+    "tags": [
+      "number",
+      "numeral"
+    ]
+  },
+  {
+    "name": "0-square-fill",
+    "title": "0 square fill",
+    "categories": [
+      "Shapes"
+    ],
+    "tags": [
+      "number",
+      "numeral"
+    ]
+  },
+  {
+    "name": "0-square",
+    "title": "0 square",
+    "categories": [
+      "Shapes"
+    ],
+    "tags": [
+      "number",
+      "numeral"
+    ]
+  },
+  {
     "name": "1-circle-fill",
     "title": "1 circle fill",
     "categories": [
@@ -428,7 +472,8 @@
       "flying",
       "plane",
       "air",
-      "airport"
+      "airport",
+      "aircraft"
     ]
   },
   {
@@ -442,7 +487,8 @@
       "flying",
       "plane",
       "air",
-      "airport"
+      "airport",
+      "aircraft"
     ]
   },
   {
@@ -456,7 +502,8 @@
       "flying",
       "plane",
       "air",
-      "airport"
+      "airport",
+      "aircraft"
     ]
   },
   {
@@ -470,7 +517,8 @@
       "flying",
       "plane",
       "air",
-      "airport"
+      "airport",
+      "aircraft"
     ]
   },
   {
@@ -595,6 +643,16 @@
       "key",
       "alt",
       "option"
+    ]
+  },
+  {
+    "name": "amd",
+    "title": "Amd",
+    "categories": [
+      "Brand"
+    ],
+    "tags": [
+      "radeon"
     ]
   },
   {
@@ -3202,8 +3260,12 @@
       "Typography"
     ],
     "tags": [
+      "text",
+      "type",
       "code",
-      "css"
+      "developer",
+      "development",
+      "software"
     ]
   },
   {
@@ -3214,7 +3276,11 @@
     ],
     "tags": [
       "text",
-      "type"
+      "type",
+      "code",
+      "developer",
+      "development",
+      "software"
     ]
   },
   {
@@ -3378,7 +3444,7 @@
     "name": "browser-chrome",
     "title": "Browser Chrome",
     "categories": [
-      "Brands"
+      "Brand"
     ],
     "tags": [
       "google",
@@ -3390,7 +3456,7 @@
     "name": "browser-edge",
     "title": "Browser Edge",
     "categories": [
-      "Brands"
+      "Brand"
     ],
     "tags": [
       "microsoft",
@@ -3401,7 +3467,7 @@
     "name": "browser-firefox",
     "title": "Browser Firefox",
     "categories": [
-      "Brands"
+      "Brand"
     ],
     "tags": [
       "gecko"
@@ -3411,7 +3477,7 @@
     "name": "browser-safari",
     "title": "Browser Safari",
     "categories": [
-      "Brands"
+      "Brand"
     ],
     "tags": [
       "webkit",
@@ -3485,10 +3551,332 @@
     ]
   },
   {
+    "name": "building-add",
+    "title": "Building add",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-check",
+    "title": "Building check",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-dash",
+    "title": "Building dash",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-down",
+    "title": "Building down",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-exclamation",
+    "title": "Building exclamation",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-fill-add",
+    "title": "Building fill add",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-fill-check",
+    "title": "Building fill check",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-fill-dash",
+    "title": "Building fill dash",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-fill-down",
+    "title": "Building fill down",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-fill-exclamation",
+    "title": "Building fill exclamation",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-fill-gear",
+    "title": "Building fill gear",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-fill-lock",
+    "title": "Building fill lock",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-fill-slash",
+    "title": "Building fill slash",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-fill-up",
+    "title": "Building fill up",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-fill-x",
+    "title": "Building fill x",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-fill",
+    "title": "Building fill",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-gear",
+    "title": "Building gear",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-lock",
+    "title": "Building lock",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-slash",
+    "title": "Building slash",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-up",
+    "title": "Building up",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "building-x",
+    "title": "Building x",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
     "name": "building",
     "title": "Building",
     "categories": [
-      "People"
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "buildings-fill",
+    "title": "Buildings fill",
+    "categories": [
+      "Buildings"
+    ],
+    "tags": [
+      "company",
+      "enterprise",
+      "organization",
+      "office",
+      "business"
+    ]
+  },
+  {
+    "name": "buildings",
+    "title": "Buildings",
+    "categories": [
+      "Buildings"
     ],
     "tags": [
       "company",
@@ -3506,6 +3894,28 @@
     ],
     "tags": [
       "target"
+    ]
+  },
+  {
+    "name": "bus-front-fill",
+    "title": "Bus front fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "public transit",
+      "commute"
+    ]
+  },
+  {
+    "name": "bus-front",
+    "title": "Bus front",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "public transit",
+      "commute"
     ]
   },
   {
@@ -6907,7 +7317,11 @@
     ],
     "tags": [
       "text",
-      "type"
+      "type",
+      "code",
+      "developer",
+      "development",
+      "software"
     ]
   },
   {
@@ -6919,6 +7333,10 @@
     "tags": [
       "text",
       "type",
+      "code",
+      "developer",
+      "development",
+      "software",
       "preformatted"
     ]
   },
@@ -6930,7 +7348,11 @@
     ],
     "tags": [
       "text",
-      "type"
+      "type",
+      "code",
+      "developer",
+      "development",
+      "software"
     ]
   },
   {
@@ -7438,6 +7860,248 @@
     ],
     "tags": [
       "minus"
+    ]
+  },
+  {
+    "name": "database-add",
+    "title": "Database add",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-check",
+    "title": "Database check",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-dash",
+    "title": "Database dash",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-down",
+    "title": "Database down",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-exclamation",
+    "title": "Database exclamation",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-fill-add",
+    "title": "Database fill add",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-fill-check",
+    "title": "Database fill check",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-fill-dash",
+    "title": "Database fill dash",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-fill-down",
+    "title": "Database fill down",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-fill-exclamation",
+    "title": "Database fill exclamation",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-fill-gear",
+    "title": "Database fill gear",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-fill-lock",
+    "title": "Database fill lock",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-fill-slash",
+    "title": "Database fill slash",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-fill-up",
+    "title": "Database fill up",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-fill-x",
+    "title": "Database fill x",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-fill",
+    "title": "Database fill",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-gear",
+    "title": "Database gear",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-lock",
+    "title": "Database lock",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-slash",
+    "title": "Database slash",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-up",
+    "title": "Database up",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database-x",
+    "title": "Database x",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
+    ]
+  },
+  {
+    "name": "database",
+    "title": "Database",
+    "categories": [
+      "Devices"
+    ],
+    "tags": [
+      "server",
+      "data"
     ]
   },
   {
@@ -8429,6 +9093,32 @@
     ]
   },
   {
+    "name": "envelope-at-fill",
+    "title": "Envelope at fill",
+    "categories": [
+      "Communications"
+    ],
+    "tags": [
+      "email",
+      "message",
+      "mail",
+      "letter"
+    ]
+  },
+  {
+    "name": "envelope-at",
+    "title": "Envelope at",
+    "categories": [
+      "Communications"
+    ],
+    "tags": [
+      "email",
+      "message",
+      "mail",
+      "letter"
+    ]
+  },
+  {
     "name": "envelope-check-fill",
     "title": "Envelope check fill",
     "categories": [
@@ -8803,6 +9493,38 @@
       "connection",
       "port",
       "plug"
+    ]
+  },
+  {
+    "name": "ev-front-fill",
+    "title": "Ev front fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "car",
+      "automobile",
+      "automotive",
+      "auto",
+      "sedan",
+      "drive",
+      "driving"
+    ]
+  },
+  {
+    "name": "ev-front",
+    "title": "Ev front",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "car",
+      "automobile",
+      "automotive",
+      "auto",
+      "sedan",
+      "drive",
+      "driving"
     ]
   },
   {
@@ -12023,6 +12745,58 @@
     ]
   },
   {
+    "name": "globe-americas",
+    "title": "Globe Americas",
+    "categories": [
+      "Geo"
+    ],
+    "tags": [
+      "geography",
+      "earth",
+      "world",
+      "map"
+    ]
+  },
+  {
+    "name": "globe-asia-australia",
+    "title": "Globe Asia Australia",
+    "categories": [
+      "Geo"
+    ],
+    "tags": [
+      "geography",
+      "earth",
+      "world",
+      "map"
+    ]
+  },
+  {
+    "name": "globe-central-south-asia",
+    "title": "Globe Central South Asia",
+    "categories": [
+      "Geo"
+    ],
+    "tags": [
+      "geography",
+      "earth",
+      "world",
+      "map"
+    ]
+  },
+  {
+    "name": "globe-europe-africa",
+    "title": "Globe Europe Africa",
+    "categories": [
+      "Geo"
+    ],
+    "tags": [
+      "geography",
+      "earth",
+      "world",
+      "map"
+    ]
+  },
+  {
     "name": "globe",
     "title": "Globe",
     "categories": [
@@ -12865,6 +13639,66 @@
     ]
   },
   {
+    "name": "house-add-fill",
+    "title": "House add fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-add",
+    "title": "House add",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-check-fill",
+    "title": "House check fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-check",
+    "title": "House check",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-dash-fill",
+    "title": "House dash fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-dash",
+    "title": "House dash",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
     "name": "house-door-fill",
     "title": "House door fill",
     "categories": [
@@ -12885,8 +13719,68 @@
     ]
   },
   {
+    "name": "house-down-fill",
+    "title": "House down fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-down",
+    "title": "House down",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-exclamation-fill",
+    "title": "House exclamation fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-exclamation",
+    "title": "House exclamation",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
     "name": "house-fill",
     "title": "House fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-gear-fill",
+    "title": "House gear fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-gear",
+    "title": "House gear",
     "categories": [
       "Real world"
     ],
@@ -12919,8 +13813,108 @@
     ]
   },
   {
+    "name": "house-lock-fill",
+    "title": "House lock fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-lock",
+    "title": "House lock",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-slash-fill",
+    "title": "House slash fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-slash",
+    "title": "House slash",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-up-fill",
+    "title": "House up fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-up",
+    "title": "House up",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-x-fill",
+    "title": "House x fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "house-x",
+    "title": "House x",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
     "name": "house",
     "title": "House",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "houses-fill",
+    "title": "Houses fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "name": "houses",
+    "title": "Houses",
     "categories": [
       "Real world"
     ],
@@ -14830,6 +15824,16 @@
     ]
   },
   {
+    "name": "nvidia",
+    "title": "Nvidia",
+    "categories": [
+      "Brand"
+    ],
+    "tags": [
+      "gpu"
+    ]
+  },
+  {
     "name": "octagon-fill",
     "title": "Octagon fill",
     "categories": [
@@ -15392,7 +16396,8 @@
       "humans",
       "organization",
       "avatar",
-      "users"
+      "users",
+      "profile"
     ]
   },
   {
@@ -15405,7 +16410,8 @@
       "humans",
       "organization",
       "avatar",
-      "users"
+      "users",
+      "profile"
     ]
   },
   {
@@ -15418,6 +16424,20 @@
       "percentage",
       "math",
       "fraction"
+    ]
+  },
+  {
+    "name": "person-add",
+    "title": "Person add",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
     ]
   },
   {
@@ -15451,7 +16471,8 @@
       "badge",
       "id",
       "card",
-      "account"
+      "account",
+      "profile"
     ]
   },
   {
@@ -15466,7 +16487,8 @@
       "avatar",
       "user",
       "crop",
-      "account"
+      "account",
+      "profile"
     ]
   },
   {
@@ -15496,7 +16518,8 @@
       "avatar",
       "user",
       "verified",
-      "account"
+      "account",
+      "profile"
     ]
   },
   {
@@ -15510,7 +16533,8 @@
       "organization",
       "avatar",
       "user",
-      "account"
+      "account",
+      "profile"
     ]
   },
   {
@@ -15546,8 +16570,191 @@
     ]
   },
   {
+    "name": "person-down",
+    "title": "Person down",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-exclamation",
+    "title": "Person exclamation",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-fill-add",
+    "title": "Person fill add",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-fill-check",
+    "title": "Person fill check",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-fill-dash",
+    "title": "Person fill dash",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-fill-down",
+    "title": "Person fill down",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-fill-exclamation",
+    "title": "Person fill exclamation",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-fill-gear",
+    "title": "Person fill gear",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-fill-lock",
+    "title": "Person fill lock",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-fill-slash",
+    "title": "Person fill slash",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-fill-up",
+    "title": "Person fill up",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-fill-x",
+    "title": "Person fill x",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
     "name": "person-fill",
     "title": "Person fill",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account",
+      "profile"
+    ]
+  },
+  {
+    "name": "person-gear",
+    "title": "Person gear",
     "categories": [
       "People"
     ],
@@ -15606,6 +16813,21 @@
       "user",
       "contact",
       "list",
+      "account",
+      "profile"
+    ]
+  },
+  {
+    "name": "person-lock",
+    "title": "Person lock",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
       "account"
     ]
   },
@@ -15657,8 +16879,65 @@
     ]
   },
   {
+    "name": "person-slash",
+    "title": "Person slash",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
     "name": "person-square",
     "title": "Person square",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account",
+      "profile"
+    ]
+  },
+  {
+    "name": "person-up",
+    "title": "Person up",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-vcard-fill",
+    "title": "Person vcard fill",
+    "categories": [
+      "People"
+    ],
+    "tags": [
+      "human",
+      "individual",
+      "avatar",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "name": "person-vcard",
+    "title": "Person vcard",
     "categories": [
       "People"
     ],
@@ -15769,7 +17048,8 @@
       "individual",
       "avatar",
       "user",
-      "account"
+      "account",
+      "profile"
     ]
   },
   {
@@ -16863,6 +18143,22 @@
     ]
   },
   {
+    "name": "regex",
+    "title": "Regex",
+    "categories": [
+      "Typography"
+    ],
+    "tags": [
+      "text",
+      "type",
+      "code",
+      "developer",
+      "development",
+      "software",
+      "regular expression"
+    ]
+  },
+  {
     "name": "repeat-1",
     "title": "Repeat 1",
     "categories": [
@@ -17010,6 +18306,56 @@
     ],
     "tags": [
       "bot"
+    ]
+  },
+  {
+    "name": "rocket-fill",
+    "title": "Rocket fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "ship",
+      "rocketship",
+      "spaceship"
+    ]
+  },
+  {
+    "name": "rocket-takeoff-fill",
+    "title": "Rocket takeoff fill",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "ship",
+      "rocketship",
+      "spaceship",
+      "launch"
+    ]
+  },
+  {
+    "name": "rocket-takeoff",
+    "title": "Rocket takeoff",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "ship",
+      "rocketship",
+      "spaceship",
+      "launch"
+    ]
+  },
+  {
+    "name": "rocket",
+    "title": "Rocket",
+    "categories": [
+      "Real world"
+    ],
+    "tags": [
+      "ship",
+      "rocketship",
+      "spaceship"
     ]
   },
   {
@@ -17173,6 +18519,14 @@
       "cut",
       "shears"
     ]
+  },
+  {
+    "name": "scooter",
+    "title": "Scooter",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": null
   },
   {
     "name": "screwdriver",
@@ -17721,6 +19075,296 @@
     ]
   },
   {
+    "name": "sign-dead-end-fill",
+    "title": "Sign dead end fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-dead-end",
+    "title": "Sign dead end",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-do-not-enter-fill",
+    "title": "Sign do not enter fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-do-not-enter",
+    "title": "Sign do not enter",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-intersection-fill",
+    "title": "Sign intersection fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-intersection-side-fill",
+    "title": "Sign intersection side fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-intersection-side",
+    "title": "Sign intersection side",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-intersection-t-fill",
+    "title": "Sign intersection t fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-intersection-t",
+    "title": "Sign intersection t",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-intersection-y-fill",
+    "title": "Sign intersection y fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-intersection-y",
+    "title": "Sign intersection y",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-intersection",
+    "title": "Sign intersection",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-merge-left-fill",
+    "title": "Sign merge left fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-merge-left",
+    "title": "Sign merge left",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-merge-right-fill",
+    "title": "Sign merge right fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-merge-right",
+    "title": "Sign merge right",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-no-left-turn-fill",
+    "title": "Sign no left turn fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-no-left-turn",
+    "title": "Sign no left turn",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-no-parking-fill",
+    "title": "Sign no parking fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-no-parking",
+    "title": "Sign no parking",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-no-right-turn-fill",
+    "title": "Sign no right turn fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-no-right-turn",
+    "title": "Sign no right turn",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "directions"
+    ]
+  },
+  {
+    "name": "sign-railroad-fill",
+    "title": "Sign railroad fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "train",
+      "tracks"
+    ]
+  },
+  {
+    "name": "sign-railroad",
+    "title": "Sign railroad",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "road",
+      "driving",
+      "train",
+      "tracks"
+    ]
+  },
+  {
     "name": "sign-stop-fill",
     "title": "Sign stop fill",
     "categories": [
@@ -18023,6 +19667,14 @@
       "mobile",
       "carrier"
     ]
+  },
+  {
+    "name": "sina-weibo",
+    "title": "Sina Weibo",
+    "categories": [
+      "Brand"
+    ],
+    "tags": null
   },
   {
     "name": "skip-backward-btn-fill",
@@ -19017,6 +20669,28 @@
     ]
   },
   {
+    "name": "stripe",
+    "title": "Stripe",
+    "categories": [
+      "Brand"
+    ],
+    "tags": [
+      "payments",
+      "commerce"
+    ]
+  },
+  {
+    "name": "subscript",
+    "title": "Subscript",
+    "categories": [
+      "Typography"
+    ],
+    "tags": [
+      "text",
+      "type"
+    ]
+  },
+  {
     "name": "subtract",
     "title": "Subtract",
     "categories": [
@@ -19216,6 +20890,17 @@
     ]
   },
   {
+    "name": "superscript",
+    "title": "Superscript",
+    "categories": [
+      "Typography"
+    ],
+    "tags": [
+      "text",
+      "type"
+    ]
+  },
+  {
     "name": "symmetry-horizontal",
     "title": "Symmetry horizontal",
     "categories": [
@@ -19339,6 +21024,30 @@
       "category",
       "taxonomy",
       "label"
+    ]
+  },
+  {
+    "name": "taxi-front-fill",
+    "title": "Taxi front fill",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "cab",
+      "uber",
+      "lyft"
+    ]
+  },
+  {
+    "name": "taxi-front",
+    "title": "Taxi front",
+    "categories": [
+      "Transportation"
+    ],
+    "tags": [
+      "cab",
+      "uber",
+      "lyft"
     ]
   },
   {
@@ -19521,6 +21230,14 @@
     ]
   },
   {
+    "name": "tencent-qq",
+    "title": "Tencent QQ",
+    "categories": [
+      "Brand"
+    ],
+    "tags": null
+  },
+  {
     "name": "terminal-dash",
     "title": "Terminal dash",
     "categories": [
@@ -19668,6 +21385,18 @@
       "type",
       "justify",
       "alignment"
+    ]
+  },
+  {
+    "name": "text-wrap",
+    "title": "Text wrap",
+    "categories": [
+      "Typography"
+    ],
+    "tags": [
+      "text",
+      "type",
+      "word wrap"
     ]
   },
   {
@@ -20082,7 +21811,8 @@
     "tags": [
       "trash-can",
       "garbage",
-      "delete"
+      "delete",
+      "remove"
     ]
   },
   {
@@ -20094,7 +21824,8 @@
     "tags": [
       "trash-can",
       "garbage",
-      "delete"
+      "delete",
+      "remove"
     ]
   },
   {
@@ -20106,7 +21837,8 @@
     "tags": [
       "trash-can",
       "garbage",
-      "delete"
+      "delete",
+      "remove"
     ]
   },
   {
@@ -20118,7 +21850,8 @@
     "tags": [
       "trash-can",
       "garbage",
-      "delete"
+      "delete",
+      "remove"
     ]
   },
   {
@@ -20130,7 +21863,8 @@
     "tags": [
       "trash-can",
       "garbage",
-      "delete"
+      "delete",
+      "remove"
     ]
   },
   {
@@ -20142,7 +21876,8 @@
     "tags": [
       "trash-can",
       "garbage",
-      "delete"
+      "delete",
+      "remove"
     ]
   },
   {
@@ -20165,6 +21900,17 @@
     "tags": [
       "tree",
       "forrest"
+    ]
+  },
+  {
+    "name": "trello",
+    "title": "Trello",
+    "categories": [
+      "Brand"
+    ],
+    "tags": [
+      "kanban",
+      "board"
     ]
   },
   {
@@ -21145,6 +22891,14 @@
     ]
   },
   {
+    "name": "wikipedia",
+    "title": "Wikipedia",
+    "categories": [
+      "Brand"
+    ],
+    "tags": null
+  },
+  {
     "name": "wind",
     "title": "Wind",
     "categories": [
@@ -21345,6 +23099,7 @@
     "tags": [
       "x",
       "delete",
+      "remove",
       "reset",
       "clear",
       "cancel",
@@ -21361,6 +23116,7 @@
     "tags": [
       "x",
       "delete",
+      "remove",
       "reset",
       "clear",
       "cancel",
@@ -21409,6 +23165,7 @@
     "tags": [
       "x",
       "delete",
+      "remove",
       "reset",
       "clear",
       "cancel",
@@ -21425,6 +23182,7 @@
     "tags": [
       "x",
       "delete",
+      "remove",
       "reset",
       "clear",
       "cancel",
@@ -21441,6 +23199,7 @@
     "tags": [
       "x",
       "delete",
+      "remove",
       "reset",
       "clear",
       "cancel",
@@ -21457,6 +23216,7 @@
     "tags": [
       "x",
       "delete",
+      "remove",
       "reset",
       "clear",
       "cancel",
@@ -21473,6 +23233,7 @@
     "tags": [
       "x",
       "delete",
+      "remove",
       "reset",
       "clear",
       "cancel",
@@ -21489,6 +23250,7 @@
     "tags": [
       "x",
       "delete",
+      "remove",
       "reset",
       "clear",
       "cancel",
