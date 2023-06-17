@@ -58,12 +58,19 @@ if yes? "The DoxxingTime installer can update styles, layouts, and page template
   run "bundle show bridgetown-quick-search || bundle add bridgetown-quick-search -g bridgetown_plugins"
   run "bundle show nokogiri || bundle add nokogiri"
   run "yarn add #{packages.join(" ")}"
-  run "mkdir -p src/shoelace-assets && cp -r node_modules/@shoelace-style/shoelace/dist/assets src/shoelace-assets"
 
   FileList.new("#{@current_dir}/templates/**/*.*").each do |file|
     target = strip_template_prefix(file)
     copy_file(file, target)
   end
+
+  run "mkdir -p src/shoelace-assets && cp -r node_modules/@shoelace-style/shoelace/dist/assets src/shoelace-assets"
+  puts "Add this to scripts: "
+  puts "mkdir -p src/shoelace-assets && cp -r node_modules/@shoelace-style/shoelace/dist/assets src/shoelace-assets"
+  puts ""
+
+  puts "Add this to config/initializers.rb"
+  puts 'init :"bridgetown-quick-search"'
 end
 
 say_status :doxxing_time, "Theme installation complete! Enjoy your fresh new design :)"
