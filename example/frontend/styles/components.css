@@ -1,45 +1,5 @@
-:root,
-.sl-theme-dark,
-.sl-theme-light,
-body {
-  --z-header: 2;
-  --z-search: 3;
-
-  --top-nav-max-width: 1650px;
-  --body-max-width: 1800px;
-  --footer-height: 135px;
-  --side-nav-width: 300px;
-  --main-width: clamp(75ch, 70vw, 100ch);
-  --main-padding-x: 1rem;
-  --input-focus-ring-width: 3px;
-  --input-font-size: var(--sl-font-size-size-medium);
-
-  --input-sm-padding: var(--sl-spacing-2x-small) var(--sl-spacing-x-small);
-  --input-padding: var(--sl-spacing-medium) var(--sl-spacing-large);
-
-  --input-border-width: 1px;
-  --input-border-style: solid;
-  --input-border-color: var(--divider-color);
-  --input-border-radius: 4px;
-
-  --input-bg-color: var(--sl-color-neutral-0);
-  --input-transition: 100ms box-shadow ease-in-out;
-
-  --logo-color: #1c1a19;
-}
-
 .sl-theme-dark body {
   --logo-color: var(--sl-color-neutral-1000);
-}
-
-/* Janky hack for iOS mobile */
-.fixed-body {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  /* Allow the main content to be scrolled,
-  so we can adjust the scroll position with JS. */
-  overflow: auto;
 }
 
 /* Janky hack for iOS mobile */
@@ -69,16 +29,19 @@ kr-layout {
   --aside-width: auto;
 }
 
+kr-layout,
+kr-layout::part(skip-links) {
+  background-color: var(--body-color);
+}
+
 kr-layout::part(body) {
-  max-width: var(--body-max-width);
+  max-width: 100vw;
   justify-content: center;
   margin: 0 auto;
 }
 
 :is(.doc, .index) kr-layout::part(main) {
-	background-color: transparent;
-	margin-inline-end: 16px;
-	margin-inline-start: 16px;
+	background-color: none;
 }
 
 .home .footer {
@@ -119,8 +82,9 @@ kbd {
   z-index: var(--z-header);
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  padding: 0.5rem clamp(1.25rem, 4vw, 2rem);
-  font-size: 1.05rem;
+  padding: 0.5rem;
+  padding-inline-end: 1.5rem;
+  font-size: 1rem;
   justify-items: space-between;
   border-bottom: 1px solid var(--sl-color-neutral-200);
 	background-color: var(--body-color);
@@ -211,8 +175,8 @@ kbd {
 
 .top-nav__github {
   font-size: 2rem;
-  width: 2rem;
   height: auto;
+  margin-inline-start: 4px;
 }
 
 .top-nav__links {
@@ -236,8 +200,7 @@ kbd {
 }
 
 .top-nav__github {
-  padding-top: var(--sl-spacing-2x-small);
-  margin-left: var(--sl-spacing-medium);
+  padding-bottom: 0;
 }
 
 .nav-link {
@@ -255,7 +218,7 @@ kbd {
 }
 
 .side-nav__item {
-  padding: 8px;
+  padding: 4px;
   max-width: 100%;
   line-height: 1.3;
 }
@@ -345,7 +308,7 @@ kbd {
 
 .footer {
   margin-top: 5px;
-  padding: var(--sl-spacing-2x-large) var(--sl-spacing-2x-small);
+  padding: var(--sl-spacing-large) var(--sl-spacing-2x-small);
   text-align: center;
   background-color: var(--sl-color-neutral-50);
 }
@@ -415,6 +378,7 @@ kbd {
 .documentation-content {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 }
 
 /** Pagination */
@@ -444,7 +408,7 @@ sl-button:is(.next-page, .previous-page):is(:hover, :focus) {
 }
 
 .pagination-footer {
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem 1rem 0rem 1rem;
   margin-top: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -502,7 +466,7 @@ sl-alert::part(base) {
 }
 
 .syntax-block__badge {
-  font-size: var(--sl-button-font-size-large);
+  font-size: var(--sl-button-font-size-medium);
   color: var(--sl-color-neutral-700);
 }
 
@@ -571,7 +535,7 @@ sl-alert::part(base) {
 }
 
 .clipboard sl-icon {
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 .clipboard__icon--success, .clipboard__icon--idle {
@@ -595,6 +559,10 @@ kr-layout > [slot='aside'] {
   display: none;
 }
 
+body:is(.index, .doc) kr-layout::part(main-content) {
+	background-color: var(--body-color);
+}
+
 @media screen and (min-width: 1360px) {
   kr-layout > [slot='aside'] {
     display: block;
@@ -606,6 +574,15 @@ kr-layout > [slot='aside'] {
     --main-padding-x: 2rem;
   }
 
+  :is(.doc, .index) kr-layout::part(main) {
+	  margin-inline-end: 16px;
+	  margin-inline-start: 16px;
+  }
+
+  .top-nav__github {
+    margin-inline-start: 0px;
+  }
+
   .documentation-content {
     border-radius: 32px;
   }
@@ -615,9 +592,14 @@ kr-layout > [slot='aside'] {
     padding-top: 2rem;
   }
 
+  :is(.doc, .index) kr-layout::part(main) {
+	  margin-inline-end: 16px;
+	  margin-inline-start: 16px;
+  }
+
+
 	body:is(.index, .doc) kr-layout::part(main-content) {
 		box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%);
-		background: var(--body-color);
 		border-radius: 32px;
 	}
 
@@ -770,67 +752,10 @@ bridgetown-ninja-keys.dark {
     }
 }
 
-/* Rhino Editor */
-
-.sl-theme-dark .rhino-editor,
-.sl-theme-dark .trix-content {
-  --rhino-button-color: var(--sl-color-neutral-700);
-  --rhino-button-disabled-text-color: var(--sl-color-neutral-300);
-  --rhino-toolbar-text-color: var(--sl-color-neutral-700);
-  --rhino-button-active-border-color: var(--sl-color-primary-700);
-  --rhino-button-active-background-color: var(--sl-color-primary-200);
-  color: white;
-}
-
-
-.sl-theme-dark .rhino-editor::part(toolbar__button):is(:focus, :hover) {
-  color: black;
-}
-
-.sl-theme-dark .rhino-editor::part(toolbar__button toolbar__button--active):is(:focus, :hover) {
-  color: white;
-}
-
-
-.sl-theme-dark .rhino-editor::part(toolbar__button--active) {
-  color: var(--sl-color-primary-800);
-}
-
-.sl-theme-dark .rhino-editor::part(toolbar__button toolbar__button--disabled):is(:focus, :hover) {
-  color: var(--sl-color-neutral-300);
-}
-
-.sl-theme-dark .rhino-editor::part(link-dialog__container) {
-  background-color: black;
-  border: 1px solid white;
-  box-shadow: none;
-}
-
-.sl-theme-dark .rhino-editor::part(link-dialog__input--invalid) {
-  color: var(--sl-color-red-200);
-}
-
-.sl-theme-dark .rhino-editor::part(tooltip-base) {
-  border: 1px solid white;
-}
-
-.sl-theme-dark .rhino-editor::part(tooltip-arrow) {
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
-}
-
-.sl-theme-dark .trix-content .attachment--preview .attachment__caption {
-  color: var(--sl-color-neutral-700);
-}
-
-.sl-theme-dark rhino-attachment-editor::part(delete-button) {
-  color: black;
-}
-
-.sl-theme-dark .trix-content pre {
-  color: black;
-}
-
-.sl-theme-dark .trix-content blockquote {
-  color: var(--sl-color-neutral-700);
+.link__flex {
+  display: inline-flex;
+  gap: 0.25em;
+  align-items: center;
+  cursor: pointer;
+  max-width: max-content;
 }

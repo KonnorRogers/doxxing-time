@@ -6,8 +6,9 @@
 // when an update is applied hence we strongly recommend adding overrides to
 // `esbuild.config.js` instead of editing this file.
 //
-// Shipped with Bridgetown v1.1.0
+// Shipped with Bridgetown v1.2.0
 
+const esbuild = require("esbuild")
 const path = require("path")
 const fsLib = require("fs")
 const fs = fsLib.promises
@@ -84,7 +85,7 @@ const importGlobPlugin = () => ({
 })
 
 // Plugin for PostCSS
-const postCssPlugin = (options, configuration) => ({
+const importPostCssPlugin = (options, configuration) => ({
   name: "postcss",
   async setup(build) {
     // Process .css files with PostCSS
@@ -206,7 +207,6 @@ const bridgetownPreset = (outputFolder) => ({
         console.warn("esbuild: build process error, cannot write manifest")
         return
       }
-      await fs.writeFile(path.join(outputFolder, 'meta.json'), JSON.stringify(result.metafile), { encoding: "utf8" })
 
       const manifest = {}
       const entrypoints = []
@@ -232,9 +232,10 @@ const bridgetownPreset = (outputFolder) => ({
           // We have an entrypoint!
           manifest[stripPrefix(value.entryPoint)] = outputPath
           entrypoints.push([outputPath, fileSize(key)])
-        } else if (key.match(/index(\.js)?\.[^-.]*\.css/) && inputs.find(item => item.match(/\.(s?css|sass)$/))) {
+        } else if (key.match(/index(\.js)?\.[^-.]*\.css/) && inputs.find(item => item.match(/frontend.*\.(s?css|sass)$/))) {
           // Special treatment for index.css
-          manifest[stripPrefix(inputs.find(item => item.match(/\.(s?css|sass)$/)))] = outputPath
+          const input = inputs.find(item => item.match(/frontend.*\.(s?css|sass)$/))
+          manifest[stripPrefix(input)] = outputPath
           entrypoints.push([outputPath, fileSize(key)])
         } else if (inputs.length > 0) {
           // Naive implementation, we'll just grab the first input and hope it's accurate
@@ -258,12 +259,12 @@ const bridgetownPreset = (outputFolder) => ({
 
 // Load the PostCSS config from postcss.config.js or whatever else is a supported location/format
 const postcssrc = require("postcss-load-config")
-const postCssConfig = postcssrc.sync()
 
-module.exports = (outputFolder, esbuildOptions) => {
+module.exports = async (outputFolder, esbuildOptions) => {
   esbuildOptions.plugins = esbuildOptions.plugins || []
   // Add the PostCSS & glob plugins to the top of the plugin stack
-  esbuildOptions.plugins.unshift(postCssPlugin(postCssConfig, esbuildOptions.postCssPluginConfig || {}))
+  const postCssConfig = await postcssrc()
+  esbuildOptions.plugins.unshift(importPostCssPlugin(postCssConfig, esbuildOptions.postCssPluginConfig || {}))
   if (esbuildOptions.postCssPluginConfig) delete esbuildOptions.postCssPluginConfig
   esbuildOptions.plugins.unshift(importGlobPlugin())
   // Add the Sass plugin
@@ -271,8 +272,10 @@ module.exports = (outputFolder, esbuildOptions) => {
   // Add the Bridgetown preset
   esbuildOptions.plugins.push(bridgetownPreset(outputFolder))
 
+  const watch = process.argv.includes("--watch")
+
   // esbuild, take it away!
-  require("esbuild").build({
+  const config = {
     bundle: true,
     loader: {
       ".jpg": "file",
@@ -286,15 +289,22 @@ module.exports = (outputFolder, esbuildOptions) => {
     },
     resolveExtensions: [".tsx", ".ts", ".jsx", ".js", ".css", ".scss", ".sass", ".json", ".js.rb"],
     nodePaths: ["frontend/javascript", "frontend/styles"],
-    watch: process.argv.includes("--watch"),
     minify: process.argv.includes("--minify"),
     sourcemap: true,
     target: "es2016",
-    entryPoints: ["frontend/javascript/index.js"],
+    entryPoints: ["./frontend/javascript/index.js"],
     entryNames: "[dir]/[name].[hash]",
     outdir: path.join(process.cwd(), `${outputFolder}/_bridgetown/static`),
     publicPath: "/_bridgetown/static",
     metafile: true,
     ...esbuildOptions,
-  }).catch(() => process.exit(1))
+  }
+
+  if (watch) {
+    const context = await esbuild.context(config).catch(() => process.exit(1))
+    await context.watch().catch(() => process.exit(1))
+  } else {
+    await esbuild.build(config).catch(() => process.exit(1))
+  }
 }
+
