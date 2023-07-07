@@ -5,9 +5,9 @@ class KrLayout extends LitElement {
     :host {
       display: block;
       box-sizing: border-box;
-      min-height: var(--height, 100%);
-      max-height: var(--height, 100%);
-      --height: 100%;
+      min-height: var(--height, 100vh);
+      max-height: 100%;
+      --height: 100dvh;
 
       --menu-width: auto;
       --main-width: 1fr;
@@ -36,7 +36,6 @@ class KrLayout extends LitElement {
       /** Header, Main, Footer **/
       grid-template-rows: minmax(0, auto) minmax(0, 1fr) minmax(0, auto);
       min-height: var(--height);
-      max-height: var(--height);
     }
 
     :host::part(header) {
@@ -115,7 +114,6 @@ class KrLayout extends LitElement {
       height: calc(var(--header-height, 48px) - 2px);
       width: 100vw;
       z-index: 4;
-      background-color: inherit;
       display: grid;
       grid-template-columns: minmax(0, 1fr);
       place-items: center;
@@ -205,5 +203,4 @@ class KrLayout extends LitElement {
 }
 
 window.customElements.define("kr-layout", KrLayout)
-
 

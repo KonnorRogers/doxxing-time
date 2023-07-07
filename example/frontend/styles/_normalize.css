@@ -12,9 +12,11 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: var(--sl-font-sans);
+	background-color: var(--body-color);
+	color: var(--text-color);
+	display: grid;
+	grid-template-rows: minmax(0, 1fr);
   min-height: 100%;
-  display: grid;
-  grid-template-rows: minmax(0, 1fr);
   margin: 0;
   padding: 0;
 }
@@ -51,49 +53,45 @@ button:hover {
   cursor: pointer;
 }
 
-h1,h2,h3,h4 {
+h1,h2,h3,h4,h5,h6 {
   scroll-margin-top: calc(80px + 2em);
-}
-
-h1 {
-  padding: 0.25em var(--sl-spacing-large);
-}
-
-h2 {
-  padding: 0.25em var(--sl-spacing-medium);
-}
-
-h3,h4 {
-  padding: 0.25em var(--sl-spacing-x-small);
-  margin: var(--sl-spacing-xx-small) var(--sl-spacing-small);
+  margin: 0;
+  padding: 0;
+  margin-top: var(--sl-spacing-large);
+  margin-bottom: var(--sl-spacing-small);
 }
 
 h1 {
   font-size: var(--sl-font-size-x-large);
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
   font-size: var(--sl-font-size-large);
-  margin-top: var(--sl-spacing-xx-large);
-  margin-bottom: var(--sl-spacing-small);
 }
 
-h3 {
-  font-size: var(--sl-font-size-medium);
-  margin-top: var(--sl-spacing-x-large);
-}
-
-h4 {
-  margin-top: var(--sl-spacing-medium);
+h3, h4 {
   font-size: var(--sl-font-size-large);
 }
 
+h5, h6 {
+  font-size: 18px;
+}
+
 p {
-  margin: var(--sl-spacing-small) var(--sl-spacing-large);
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0;
+  font-size: 1.1rem;
 }
 
 p, li {
-  line-height: 1.6;
+  line-height: 1.5;
+}
+
+li {
   font-size: 1rem;
 }
 
@@ -129,8 +127,9 @@ kr-layout::part(skip-link) {
   text-underline-offset: 0.25em;
   color: var(--link-color);
   border-radius: 2px;
-  display: inline-block;
+  display: inline;
   padding: 0.25em;
+  margin: -0.25em;
   line-height: 1.2;
   transition: all 0.2s;
 }
@@ -161,64 +160,17 @@ a:is(:focus-visible) {
   }
 }
 
-
-div[class*="language-"] {
-  margin: var(--sl-spacing-xx-small) 0 var(--sl-spacing-xxx-large) 0 !important;
-}
-
-/* Code block */
-pre {
-  padding: var(--sl-spacing-large);
-  margin: var(--sl-spacing-large) 0;
-  overflow-x: auto;
-}
-
 code > span {
   line-height: var(--sl-line-height-dense);
 }
 
-.highlighter-rouge,
-.highlight {
-  border-radius: var(--sl-border-radius-large);
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-.highlight,
-.highlighter-rouge {
-  position: relative;
-}
-
-/* Inline code blocks */
-code.highlight,
-code.highlighter-rouge {
-  display: inline-block;
-  font-size: 0.85em;
-  padding: 0.1em 0.4em;
-  margin: var(--sl-spacing-xx-small) 0;
-  border-radius: 6px;
-  background-color: var(--code-background-color);
-  color: var(--code-color);
-  white-space: break-spaces;
-  vertical-align: middle;
-}
-
-/* :where(:not(:defined)) { */
-/*   visibility: hidden; */
-/* } */
-
-/** https://github.com/shoelace-style/shoelace/pull/1317 */
-sl-button::part(base) {
-  min-height: var(--sl-input-height-medium);
-  height: auto;
-}
-
-sl-button[size='large']::part(base) {
-  min-height: var(--sl-input-height-large);
-  height: auto;
-}
-
-sl-button[size='small']::part(base) {
-  min-height: var(--sl-input-height-small);
-  height: auto;
+kbd {
+  font-family: var(--sl-font-mono);
+  font-size: 87.5%;
+  background-color: var(--sl-color-neutral-50);
+  border-radius: 4px;
+  border: solid 1px var(--sl-color-neutral-200);
+  box-shadow: inset 0 1px 0 var(--sl-color-neutral-0);
+  padding: 2px 5px;
+  line-height: 1;
 }
