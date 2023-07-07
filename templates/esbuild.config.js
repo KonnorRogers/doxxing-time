@@ -31,6 +31,7 @@ const esbuildOptions = {
   format: "esm",
   entryPoints: [
     "frontend/javascript/index.js",
+    "frontend/javascript/defer.js",
   ]
 }
 
