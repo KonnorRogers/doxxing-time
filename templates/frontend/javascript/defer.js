@@ -1,7 +1,7 @@
 import "../styles/defer.css"
 
-import("@konnorr/bridgetown-quick-search/ninja-keys.js").then((module) => {
-  const { BridgetownNinjaKeys } = module
+;(window.requestIdleCallback || window.setTimeout)(async () => {
+  const { BridgetownNinjaKeys } = await import("@konnorr/bridgetown-quick-search/ninja-keys.js")
 
   /** @type {import("konnors-ninja-keys").INinjaAction[]} */
   const staticData = [
@@ -13,6 +13,7 @@ import("@konnorr/bridgetown-quick-search/ninja-keys.js").then((module) => {
       keywords: "theme",
       handler () {
         window.applyTheme("light");
+        return {keepOpen: true}
       }
     },
     {
@@ -23,6 +24,7 @@ import("@konnorr/bridgetown-quick-search/ninja-keys.js").then((module) => {
       keywords: "theme",
       handler () {
         window.applyTheme("dark");
+        return {keepOpen: true}
       }
     },
     {
@@ -33,6 +35,7 @@ import("@konnorr/bridgetown-quick-search/ninja-keys.js").then((module) => {
       keywords: "theme",
       handler () {
         window.applyTheme("system");
+        return {keepOpen: true}
       }
     },
   ]
@@ -98,4 +101,3 @@ import("@konnorr/bridgetown-quick-search/ninja-keys.js").then((module) => {
     }
   }).define("bridgetown-ninja-keys")
 })
-
