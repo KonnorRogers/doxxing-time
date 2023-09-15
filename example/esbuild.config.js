@@ -27,12 +27,13 @@ const outputFolder = "output"
 // const esbuildOptions = { publicPath: "/my_subfolder/_bridgetown/static" }
 // ```
 const esbuildOptions = {
-  splitting: true,
-  format: "esm",
+  target: "es2020",
   entryPoints: [
     "frontend/javascript/index.js",
     "frontend/javascript/defer.js",
-  ]
+  ],
+  splitting: true,
+  format: "esm"
 }
 
 build(outputFolder, esbuildOptions)

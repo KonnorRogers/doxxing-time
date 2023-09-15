@@ -5,8 +5,8 @@ class KrLayout extends LitElement {
     :host {
       display: block;
       box-sizing: border-box;
-      min-height: var(--height, 100vh);
-      max-height: 100%;
+      min-height: var(--height);
+      --height: 100vh;
       --height: 100dvh;
 
       --menu-width: auto;
@@ -14,7 +14,7 @@ class KrLayout extends LitElement {
       --aside-width: auto;
 
       /** This is a best guess. We'll attempt to calculate this with a resize observer. **/
-      --header-height: 48px;
+      --header-height: 68.33px;
     }
 
     :host([variant="documentation"]) {
@@ -66,18 +66,10 @@ class KrLayout extends LitElement {
       grid-template-rows: minmax(0, 1fr);
     }
 
-    :host::part(menu) {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-    }
-
-    :host::part(aside) {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-    }
-
     :host::part(aside),
     :host::part(menu) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
       max-height: calc(var(--height) - var(--header-height));
       overflow: auto;
       position: sticky;
@@ -114,6 +106,7 @@ class KrLayout extends LitElement {
       height: calc(var(--header-height, 48px) - 2px);
       width: 100vw;
       z-index: 4;
+      background-color: inherit;
       display: grid;
       grid-template-columns: minmax(0, 1fr);
       place-items: center;
@@ -130,27 +123,36 @@ class KrLayout extends LitElement {
     this.main_id = "main"
   }
 
-  connectedCallback () {
-    super.connectedCallback?.()
-
-    this.resizeObserver = new ResizeObserver((entries) => {
+  createResizeObserver (slot) {
+    return new ResizeObserver((entries) => {
       for (const entry of entries) {
         if (entry.contentBoxSize) {
           const contentBoxSize = entry.borderBoxSize[0];
-          this.style.setProperty("--header-height", `${contentBoxSize.blockSize}px`)
+          this.style.setProperty(`--${slot}-height`, `${contentBoxSize.blockSize}px`)
         }
       }
-    });
+    })
+  }
+
+  connectedCallback () {
+    super.connectedCallback?.()
+
+    this.headerResizeObserver = this.createResizeObserver("header");
+    this.footerResizeObserver = this.createResizeObserver("footer");
 
     setTimeout(() => {
       this.header = this.shadowRoot.querySelector("[part~='header']")
-      this.resizeObserver.observe(this.header)
+      this.headerResizeObserver.observe(this.header)
+
+      // this.footer = this.shadowRoot.querySelector("[part~='main-footer']")
+      // this.footerResizeObserver.observe(this.footer)
     })
   }
 
   disconnectedCallback () {
     super.disconnectedCallback?.()
-    this.resizeObserver.unobserve(this.header);
+    this.headerResizeObserver.unobserve(this.header)
+    // this.footerResizeObserver.unobserve(this.footer)
   }
 
   render () {
@@ -203,4 +205,5 @@ class KrLayout extends LitElement {
 }
 
 window.customElements.define("kr-layout", KrLayout)
+
 
